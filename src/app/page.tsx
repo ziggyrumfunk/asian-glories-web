@@ -8,6 +8,7 @@ import RevealScript from '@/components/Reveal';
 import ScrollZoom from '@/components/ScrollZoom';
 import Link from 'next/link';
 import { useT } from '@/lib/i18n';
+import { onReserveClick } from '@/lib/formitable';
 import './home.css';
 
 export default function HomePage() {
@@ -388,7 +389,7 @@ export default function HomePage() {
                 <em>{t('home.reserve.title2')}</em>
               </h2>
             </div>
-            <a href="mailto:info@asianglories.nl" className="btn-g">
+            <a href="#reserveer" onClick={onReserveClick} className="btn-g">
               {t('home.reserve.btn')}
             </a>
           </div>

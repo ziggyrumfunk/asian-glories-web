@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useI18n } from '@/lib/i18n';
+import { onReserveClick } from '@/lib/formitable';
 
 export default function Nav() {
   const { locale, setLocale, t } = useI18n();
@@ -94,7 +95,8 @@ export default function Nav() {
           </li>
           <li>
             <a
-              href="mailto:info@asianglories.nl"
+              href="#reserveer"
+              onClick={onReserveClick}
               className="text-[11px] font-bold tracking-[0.18em] uppercase text-green bg-gold px-6 py-[10px] rounded-[1px] hover:bg-gold-deep transition-all"
             >
               {t('nav.reserve')}
@@ -141,8 +143,11 @@ export default function Nav() {
           </Link>
         ))}
         <a
-          href="mailto:info@asianglories.nl"
-          onClick={() => setOpen(false)}
+          href="#reserveer"
+          onClick={(e) => {
+            setOpen(false);
+            onReserveClick(e);
+          }}
           className="text-[13px] font-bold tracking-[0.16em] uppercase bg-gold text-green px-[42px] py-[15px] rounded-[1px]"
         >
           {t('nav.reserve')}

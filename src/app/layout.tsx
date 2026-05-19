@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Cormorant, DM_Sans } from 'next/font/google';
 import LoadingCurtain from '@/components/LoadingCurtain';
+import FormitableWidget from '@/components/FormitableWidget';
 import { I18nProvider } from '@/lib/i18n';
 import './globals.css';
 
@@ -82,6 +83,7 @@ export default function RootLayout({
         />
         <LoadingCurtain />
         <I18nProvider>{children}</I18nProvider>
+        <FormitableWidget />
       </body>
     </html>
   );
