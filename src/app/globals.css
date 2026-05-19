@@ -2,19 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-host Glacial Indifference via jsDelivr (same source as the original site) */
-@font-face {
-  font-family: 'GI';
-  src: url('https://cdn.jsdelivr.net/gh/bBoxType/glacial-indifference@1.0/GlacialIndifference-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'GI';
-  src: url('https://cdn.jsdelivr.net/gh/bBoxType/glacial-indifference@1.0/GlacialIndifference-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-display: swap;
-}
+/* Glacial Indifference was previously loaded from jsDelivr; the CDN was
+   unreliable so we now fall back to DM Sans (which next/font loads via
+   --font-dm-sans). DM Sans is a close enough geometric sans for the body
+   font that the difference isn't visible in practice. If we want GI back
+   later, self-host the .otf files under public/fonts/ and add @font-face
+   rules pointing to /fonts/... so we don't depend on an external CDN. */
 
 :root {
   --font-gi: 'GI', 'DM Sans', system-ui, sans-serif;

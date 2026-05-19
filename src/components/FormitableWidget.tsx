@@ -9,15 +9,23 @@ import Script from 'next/script';
  *
  * Restaurant ID is the Asian Glories Formitable key. Auto-open is disabled
  * (data-open="0") so the panel doesn't pop up on first load.
+ *
+ * Implementation note: Formitable's official embed uses an inline async
+ * loader that relies on a pre-existing <script> tag in the DOM, which doesn't
+ * always work under Next.js's hydration order. We load the SDK directly via
+ * next/script instead — same end result, simpler, more reliable.
  */
 export default function FormitableWidget() {
   return (
     <>
       <Script
         id="formitable-sdk"
+        src="https://cdn.formitable.com/sdk/v1/ft.sdk.min.js"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `(function (d, s, id, h) { var ftjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; var js = d.createElement(s); js.id = id; js.src = "https://cdn.formitable.com/sdk/v1/ft.sdk.min.js"; h && (js.onload = h); ftjs.parentNode.insertBefore(js, ftjs); }(document, 'script', 'formitable-sdk', function () { FT.load('Analytics'); }));`,
+        onLoad={() => {
+          if (typeof window !== 'undefined' && window.FT?.load) {
+            window.FT.load('Analytics');
+          }
         }}
       />
       <div
