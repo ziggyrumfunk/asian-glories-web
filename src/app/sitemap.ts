@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/reserveer`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.95,
+    },
+    {
       url: `${BASE_URL}/boek`,
       lastModified: now,
       changeFrequency: 'yearly',

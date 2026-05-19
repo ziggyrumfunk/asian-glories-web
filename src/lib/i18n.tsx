@@ -221,6 +221,45 @@ const DICT: Dict = {
   // Footer credit
   'footer.creditby': { nl: 'Website door', en: 'Website by' },
 
+  // ---- /reserveer page ----
+  'reserveer.eyebrow': { nl: 'Reserveren', en: 'Reservations' },
+  'reserveer.title1': { nl: 'Tafel', en: 'Reserve' },
+  'reserveer.title2': { nl: 'reserveren', en: 'a table' },
+  'reserveer.intro1': {
+    nl:
+      'Reserveren gaat eenvoudig via de reserveringsknop rechtsonder op de pagina. Kies uw datum, tijd en aantal personen en u ontvangt direct een bevestiging per e-mail.',
+    en:
+      'Reservations go through the booking button at the bottom-right of the page. Choose your date, time and party size and you will receive an instant confirmation by email.',
+  },
+  'reserveer.intro2': {
+    nl:
+      'Voor grotere gezelschappen of speciale gelegenheden kunt u ook contact opnemen via',
+    en: 'For larger parties or special occasions please reach out via',
+  },
+  'reserveer.intro2.or': { nl: 'of bellen via', en: 'or call' },
+  'reserveer.cta.label': {
+    nl: 'Gebruik de reserveringsknop rechtsonder',
+    en: 'Use the booking button at the bottom-right',
+  },
+  'reserveer.cta.sub': {
+    nl: 'Zichtbaar op elke pagina van onze website.',
+    en: 'Visible on every page of our website.',
+  },
+  'reserveer.useful': { nl: 'Nuttige informatie', en: 'Useful information' },
+  'reserveer.kreeft.title': { nl: 'Canadese kreeft', en: 'Canadian lobster' },
+  'reserveer.kreeft.text': {
+    nl:
+      'De Canadese kreeft is uitsluitend beschikbaar op voorbestelling. Geef bij uw reservering aan dat u kreeft wenst, minimaal 2 dagen voor uw bezoek. Zo kunnen wij zorgen voor de beste kwaliteit.',
+    en:
+      'Canadian lobster is available by pre-order only. Mention at the time of booking that you wish to have lobster, at least 2 days before your visit, so we can source the best quality.',
+  },
+  'reserveer.phone.title': { nl: 'Liever telefonisch?', en: 'Prefer to call?' },
+  'reserveer.phone.text': {
+    nl: 'U kunt ook bellen via',
+    en: 'You can also call us at',
+  },
+  'reserveer.phone.or': { nl: 'of mailen naar', en: 'or email us at' },
+
   // Day names
   'day.mon': { nl: 'Maandag', en: 'Monday' },
   'day.tue': { nl: 'Dinsdag', en: 'Tuesday' },
