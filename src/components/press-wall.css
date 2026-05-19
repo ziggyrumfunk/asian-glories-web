@@ -1,0 +1,238 @@
+/* Editorial press rotator
+   - Dark green panel, fits the parallax + reservation aesthetic
+   - Oversized gold quotation mark as decoration
+   - Single cross-fading slide at a time, with auto-cycle and dot indicators */
+
+.press {
+  position: relative;
+  overflow: hidden;
+}
+/* Standalone (section) variant gets its own dark backdrop and padding */
+.press--section {
+  background: #0b2d23;
+  padding: clamp(80px, 10vw, 140px) var(--pad);
+  background-image:
+    radial-gradient(ellipse at 50% 30%, rgba(252, 237, 136, 0.05) 0%, transparent 60%),
+    linear-gradient(180deg, #0b2d23 0%, #0a261d 100%);
+}
+.press--section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(252, 237, 136, 0.03) 50%, transparent 100%);
+  mix-blend-mode: overlay;
+}
+/* Inline variant inherits the parent's bg; just provides the layout */
+.press--inline {
+  padding: 0;
+}
+/* Inline (embedded inside .more__editorial) should be left-aligned and
+   compact so it reads as part of the column, not a centered standalone */
+.press--inline .press__inner {
+  text-align: left;
+  max-width: none;
+}
+.press--inline .press__mark {
+  font-size: clamp(120px, 14vw, 200px);
+  top: -20px;
+  left: -8px;
+  transform: none;
+}
+.press--inline .press__stage {
+  min-height: clamp(180px, 22vw, 260px);
+  margin-bottom: 28px;
+}
+.press--inline .press__slide {
+  align-items: flex-start;
+  text-align: left;
+  gap: 18px;
+}
+.press--inline .press__quote {
+  font-size: clamp(20px, 2.2vw, 28px);
+  margin: 0;
+}
+.press--inline .press__attr {
+  padding-top: 0;
+}
+.press--inline .press__dots {
+  justify-content: flex-start;
+}
+
+/* Oversized decorative quotation mark */
+.press__mark {
+  position: absolute;
+  top: clamp(-30px, -2vw, -10px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(180px, 22vw, 320px);
+  line-height: 0.8;
+  color: rgba(252, 237, 136, 0.08);
+  pointer-events: none;
+  user-select: none;
+  font-style: italic;
+}
+
+.press__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.press__eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #fced88;
+  margin-bottom: 56px;
+  display: block;
+}
+
+/* Stage: a fixed-height container that holds all slides stacked. The active
+   one fades in, the rest stay invisible but in the layout so the section
+   height doesn't jump between quotes. */
+.press__stage {
+  position: relative;
+  min-height: clamp(260px, 30vw, 360px);
+  margin-bottom: 48px;
+}
+.press__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.press__slide[data-active='true'] {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.press__quote {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(26px, 3.4vw, 44px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.32;
+  color: #fff;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.press__attr {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 8px;
+}
+.press__pub {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #fced88;
+}
+.press__award {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: rgba(252, 237, 136, 0.55);
+  padding-left: 16px;
+  border-left: 1px solid rgba(252, 237, 136, 0.2);
+}
+
+.press__source {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  padding-bottom: 3px;
+  transition: color 0.25s, border-color 0.25s;
+}
+.press__source:hover {
+  color: #fced88;
+  border-color: #fced88;
+}
+
+/* Progress ticks: short bars under the slides. The active one fills from
+   left to right as a visible auto-cycle countdown. */
+.press__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.press__dot {
+  width: 56px;
+  height: 24px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.press__dot-track {
+  width: 100%;
+  height: 2px;
+  background: rgba(252, 237, 136, 0.18);
+  border-radius: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.press__dot[data-active='true'] .press__dot-track {
+  background: rgba(252, 237, 136, 0.22);
+}
+.press__dot:hover .press__dot-track {
+  background: rgba(252, 237, 136, 0.35);
+}
+.press__dot-fill {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: #fced88;
+  animation-name: press-fill;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes press-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .press__dot-fill {
+    animation: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .press__attr {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .press__award {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
