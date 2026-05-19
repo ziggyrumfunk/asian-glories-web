@@ -213,6 +213,13 @@ const DICT: Dict = {
   'home.info.address': { nl: 'Adres', en: 'Address' },
   'home.info.phone': { nl: 'Telefoon', en: 'Phone' },
   'home.info.email': { nl: 'E-mail', en: 'Email' },
+  'home.info.hours.note': {
+    nl: '* Laatste reservering',
+    en: '* Last seating',
+  },
+
+  // Footer credit
+  'footer.creditby': { nl: 'Website door', en: 'Website by' },
 
   // Day names
   'day.mon': { nl: 'Maandag', en: 'Monday' },

@@ -402,32 +402,44 @@ export default function HomePage() {
               <p className="lbl">{t('home.info.hours')}</p>
               <div className="hr">
                 <span>{t('day.mon')}</span>
-                <span>{t('day.closed')}</span>
+                <span>17:00 &ndash; 21:30 *</span>
               </div>
               <div className="hr">
                 <span>{t('day.tue')}</span>
-                <span>17:00 &ndash; 22:00</span>
+                <span>{t('day.closed')}</span>
               </div>
               <div className="hr">
                 <span>{t('day.wed')}</span>
-                <span>17:00 &ndash; 22:00</span>
+                <span>{t('day.closed')}</span>
               </div>
               <div className="hr">
                 <span>{t('day.thu')}</span>
-                <span>17:00 &ndash; 22:00</span>
+                <span>17:00 &ndash; 21:30</span>
               </div>
               <div className="hr">
                 <span>{t('day.fri')}</span>
-                <span>12:00 &ndash; 22:30</span>
+                <span>12:00 &ndash; 22:00 *</span>
               </div>
               <div className="hr">
                 <span>{t('day.sat')}</span>
-                <span>12:00 &ndash; 22:30</span>
+                <span>12:00 &ndash; 22:00</span>
               </div>
               <div className="hr">
                 <span>{t('day.sun')}</span>
-                <span>12:00 &ndash; 22:00</span>
+                <span>12:00 &ndash; 21:00 *</span>
               </div>
+              <p
+                className="rv"
+                style={{
+                  fontSize: 11,
+                  fontStyle: 'italic',
+                  color: '#9a9a9a',
+                  marginTop: 14,
+                  letterSpacing: '0.02em',
+                }}
+              >
+                {t('home.info.hours.note')}
+              </p>
             </div>
             <div>
               <p className="lbl">{t('home.info.contact')}</p>
