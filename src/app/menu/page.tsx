@@ -45,11 +45,6 @@ const Tasting = (
         <div className="tasting-card__price">
           &euro;58 <span>p.p.</span>
         </div>
-        <p className="tasting-card__desc">
-          Dim Sum | Peking-eend | Zeevruchten en meer
-          <br />
-          Het dessert is niet inbegrepen
-        </p>
       </div>
       <div className="tasting-card">
         <span className="tasting-card__cn">六道</span>
@@ -57,11 +52,6 @@ const Tasting = (
         <div className="tasting-card__price">
           &euro;68 <span>p.p.</span>
         </div>
-        <p className="tasting-card__desc">
-          Dim Sum | Peking-eend | Zeevruchten en meer
-          <br />
-          Het dessert is niet inbegrepen
-        </p>
       </div>
       <div className="tasting-card">
         <span className="tasting-card__cn">八道</span>
@@ -69,11 +59,6 @@ const Tasting = (
         <div className="tasting-card__price">
           &euro;78 <span>p.p.</span>
         </div>
-        <p className="tasting-card__desc">
-          Dim Sum | Peking-eend | Zeevruchten en meer
-          <br />
-          Het dessert is niet inbegrepen
-        </p>
       </div>
     </div>
   </>
@@ -129,18 +114,18 @@ const warmDishes: Dish[] = [
 ];
 
 const mainCourses: Dish[] = [
-  { name: 'Tiger prawns | sichuan pepper | black beans', cn: '避风塘炒大虾', price: '€ 38,5' },
-  { name: 'King prawns | curry sauce', cn: '咖喱虾', price: '€ 38,5' },
-  { name: 'Fish Catch of the Day (steamed or panfried)', cn: '蒸/炸鱼', price: '€ 37,5 / 39,95' },
+  { name: 'Tiger prawns | sichuan pepper | black beans', price: '€ 38,5' },
+  { name: 'King prawns | curry sauce', price: '€ 38,5' },
+  { name: 'Fish Catch of the Day (steamed or panfried)', price: '€ 37,5 / 39,95' },
   {
     name: 'Canadian Lobster | spring onion | ginger',
     note: 'Only pre-order',
     price: '€ 12,50/100gr',
   },
-  { name: 'Diamond steak | black pepper | macadamia', cn: '夏果黑椒牛柳粒', price: '€ 38,5' },
-  { name: 'Crispy filet steak stripes | mandarin sweet & sour', cn: '干牛丝', price: '€ 30' },
-  { name: 'Crispy Spanish Iberico pork | sweet & sour', cn: '古老西班牙黑猪', price: '€ 31,5' },
-  { name: 'Chicken | barbecue sauce', cn: '沙茶鸡', price: '€ 31,5' },
+  { name: 'Diamond steak | black pepper | macadamia', price: '€ 38,5' },
+  { name: 'Crispy filet steak stripes | mandarin sweet & sour', price: '€ 30' },
+  { name: 'Crispy Spanish Iberico pork | sweet & sour', price: '€ 31,5' },
+  { name: 'Chicken | barbecue sauce', price: '€ 31,5' },
   { name: 'Char-Siew | crispy roasted pork belly', price: '€ 31' },
   {
     name: 'Siu-Yuk | marinated and roasted pork in a sweet and savoury sauce',
@@ -151,8 +136,8 @@ const mainCourses: Dish[] = [
     note: 'Choose your own sauce',
     price: '€ 30',
   },
-  { name: 'Fresh greens | wok vegetables mix', cn: '中国青菜', price: '€ 25,5' },
-  { name: 'Fried rice or mie', cn: '炒饭面另外加', price: '€ 5,5' },
+  { name: 'Fresh greens | wok vegetables mix', price: '€ 25,5' },
+  { name: 'Fried rice or mie', price: '€ 5,5' },
 ];
 
 const ALaCarte = (
@@ -161,7 +146,6 @@ const ALaCarte = (
     <div className="cat-header rv">
       <div className="cat-header__line" />
       <h2>First Impressions</h2>
-      <span className="cat-header__cn">初印象</span>
       <div className="cat-header__line" />
     </div>
     <DishList dishes={firstImpressions} />
@@ -170,7 +154,6 @@ const ALaCarte = (
     <div className="cat-header rv">
       <div className="cat-header__line" />
       <h2>Dim Sum Collection</h2>
-      <span className="cat-header__cn">点心</span>
       <div className="cat-header__line" />
     </div>
     <DishList dishes={dimsumBundles} />
@@ -179,7 +162,6 @@ const ALaCarte = (
     <div className="cat-header rv">
       <div className="cat-header__line" />
       <h2>Warm Dishes</h2>
-      <span className="cat-header__cn">热盘</span>
       <div className="cat-header__line" />
     </div>
     <DishList dishes={warmDishes} />
@@ -192,7 +174,6 @@ const ALaCarte = (
     <div className="cat-header rv">
       <div className="cat-header__line" />
       <h2>Main Courses</h2>
-      <span className="cat-header__cn">主菜</span>
       <div className="cat-header__line" />
     </div>
     <DishList dishes={mainCourses} />
