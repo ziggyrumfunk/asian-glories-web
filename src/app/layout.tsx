@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Cormorant, DM_Sans } from 'next/font/google';
 import LoadingCurtain from '@/components/LoadingCurtain';
-import FormitableWidget from '@/components/FormitableWidget';
+import ZenchefWidget from '@/components/ZenchefWidget';
 import { I18nProvider } from '@/lib/i18n';
 import './globals.css';
 
@@ -67,6 +67,7 @@ const restaurantSchema = {
   menu: 'https://www.asianglories.nl/menu',
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '17:00', closes: '21:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Tuesday', opens: '17:00', closes: '21:30' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday', opens: '17:00', closes: '21:30' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '12:00', closes: '22:00' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '12:00', closes: '22:00' },
@@ -98,7 +99,7 @@ export default function RootLayout({
         />
         <LoadingCurtain />
         <I18nProvider>{children}</I18nProvider>
-        <FormitableWidget />
+        <ZenchefWidget />
       </body>
     </html>
   );
