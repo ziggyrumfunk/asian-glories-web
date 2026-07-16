@@ -73,7 +73,7 @@ export default function ReserveerPage() {
                 </div>
                 <div className="hr">
                   <span>{t('day.tue')}</span>
-                  <span>{t('day.closed')}</span>
+                  <span>17:00 &ndash; 21:30</span>
                 </div>
                 <div className="hr">
                   <span>{t('day.wed')}</span>

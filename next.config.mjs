@@ -20,6 +20,10 @@ const nextConfig = {
       { source: '/wijnen', destination: '/wijnkaart', permanent: true },
       { source: '/menukaart', destination: '/menu', permanent: true },
       { source: '/book', destination: '/boek', permanent: true },
+      // Pages that exist on the old Wix site but not here; point them at the
+      // matching sections on the home page so old links and search results keep working.
+      { source: '/openingstijden', destination: '/#openingstijden', permanent: true },
+      { source: '/contact', destination: '/#contact', permanent: true },
     ];
   },
 };
