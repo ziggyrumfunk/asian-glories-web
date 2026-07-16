@@ -102,25 +102,50 @@ export default function Nav() {
           </li>
         </ul>
 
-        <button
-          className="md:hidden flex flex-col gap-[5px] bg-transparent border-0 cursor-pointer p-1"
-          aria-label="Menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span
-            className="block w-[22px] h-[1.5px] bg-white transition-transform duration-300"
-            style={{ transform: open ? 'translateY(6.5px) rotate(45deg)' : undefined }}
-          />
-          <span
-            className="block w-[22px] h-[1.5px] bg-white transition-opacity duration-200"
-            style={{ opacity: open ? 0 : 1 }}
-          />
-          <span
-            className="block w-[22px] h-[1.5px] bg-white transition-transform duration-300"
-            style={{ transform: open ? 'translateY(-6.5px) rotate(-45deg)' : undefined }}
-          />
-        </button>
+        {/* Mobile: language toggle lives in the top bar (bottom of the screen is
+            occupied by the floating Zenchef reservation button). */}
+        <div className="md:hidden flex items-center gap-4">
+          <div className="flex items-center gap-1 text-[11px] tracking-[0.18em] uppercase text-white/70">
+            <button
+              type="button"
+              onClick={() => setLocale('nl')}
+              aria-pressed={locale === 'nl'}
+              className="p-1 transition-colors"
+              style={{ color: locale === 'nl' ? '#fced88' : undefined }}
+            >
+              NL
+            </button>
+            <span aria-hidden="true">/</span>
+            <button
+              type="button"
+              onClick={() => setLocale('en')}
+              aria-pressed={locale === 'en'}
+              className="p-1 transition-colors"
+              style={{ color: locale === 'en' ? '#fced88' : undefined }}
+            >
+              EN
+            </button>
+          </div>
+          <button
+            className="flex flex-col gap-[5px] bg-transparent border-0 cursor-pointer p-1"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span
+              className="block w-[22px] h-[1.5px] bg-white transition-transform duration-300"
+              style={{ transform: open ? 'translateY(6.5px) rotate(45deg)' : undefined }}
+            />
+            <span
+              className="block w-[22px] h-[1.5px] bg-white transition-opacity duration-200"
+              style={{ opacity: open ? 0 : 1 }}
+            />
+            <span
+              className="block w-[22px] h-[1.5px] bg-white transition-transform duration-300"
+              style={{ transform: open ? 'translateY(-6.5px) rotate(-45deg)' : undefined }}
+            />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile fullscreen menu */}
@@ -147,31 +172,6 @@ export default function Nav() {
         >
           {t('nav.reserve')}
         </Link>
-        <div className="flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-cream/60 mt-4">
-          <button
-            type="button"
-            onClick={() => {
-              setLocale('nl');
-            }}
-            aria-pressed={locale === 'nl'}
-            className="px-1"
-            style={{ color: locale === 'nl' ? '#fced88' : undefined }}
-          >
-            NL
-          </button>
-          <span aria-hidden="true">/</span>
-          <button
-            type="button"
-            onClick={() => {
-              setLocale('en');
-            }}
-            aria-pressed={locale === 'en'}
-            className="px-1"
-            style={{ color: locale === 'en' ? '#fced88' : undefined }}
-          >
-            EN
-          </button>
-        </div>
       </div>
     </>
   );
