@@ -9,7 +9,7 @@ import './menu.css';
 export const metadata: Metadata = {
   title: 'Menu | Asian Glories Rotterdam | Kantonees & Sichuan Restaurant',
   description:
-    "Bekijk de menukaart van Asian Glories Rotterdam. Soepen, voorgerechten, hoofdgerechten en proeverijmenu's. Authentieke Kantonese en Sichuan keuken.",
+    "Bekijk de menukaart van Asian Glories Rotterdam. Soepen, voorgerechten, hoofdgerechten en proeverijmenu's. Elke dinsdagavond tapas. Authentieke Kantonese en Sichuan keuken.",
   alternates: { canonical: '/menu' },
 };
 
@@ -25,6 +25,7 @@ const menuSchema = {
     { '@type': 'MenuSection', name: 'Dim Sum Collection' },
     { '@type': 'MenuSection', name: 'Warm Dishes' },
     { '@type': 'MenuSection', name: 'Main Courses' },
+    { '@type': 'MenuSection', name: 'Dinsdag Tapas' },
   ],
 };
 
@@ -191,6 +192,47 @@ const ALaCarte = (
   </>
 );
 
+/* Tuesday tapas evening: the small dishes only, no main courses. Reuses the
+   same dish arrays as the a la carte tab so prices live in one place. */
+const TuesdayTapas = (
+  <>
+    <p className="tasting-note rv" style={{ marginBottom: 'clamp(40px,5vw,60px)' }}>
+      Elke dinsdagavond serveren wij ons tapas-menu: een selectie kleine gerechten om te delen.
+    </p>
+
+    <div className="cat-header rv">
+      <div className="cat-header__line" />
+      <h2>First Impressions</h2>
+      <div className="cat-header__line" />
+    </div>
+    <DishList dishes={firstImpressions} />
+
+    <div className="cat-header rv">
+      <div className="cat-header__line" />
+      <h2>Dim Sum Collection</h2>
+      <div className="cat-header__line" />
+    </div>
+    <DishList dishes={dimsumBundles} />
+
+    <div className="cat-header rv">
+      <div className="cat-header__line" />
+      <h2>Warm Dishes</h2>
+      <div className="cat-header__line" />
+    </div>
+    <DishList dishes={warmDishes} />
+
+    <p className="tasting-note rv" style={{ marginTop: 'clamp(40px,5vw,60px)' }}>
+      Vraag naar eventuele gerechtjes buiten kaart om.
+    </p>
+
+    <div className="allergy-note rv">
+      <p className="allergy-note__text">
+        <strong>Heeft u een allergie?</strong> Meld het ons!
+      </p>
+    </div>
+  </>
+);
+
 export default function MenuPage() {
   return (
     <>
@@ -254,7 +296,7 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <MenuTabs tasting={Tasting} alacarte={ALaCarte} />
+      <MenuTabs tasting={Tasting} alacarte={ALaCarte} tapas={TuesdayTapas} />
 
       <section className="menu-cta-bottom">
         <div className="menu-cta-bottom__inner">

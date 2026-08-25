@@ -92,8 +92,24 @@
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
+}
+/* Three tabs don't fit side by side on a phone; turn the bar into a
+   horizontally swipeable row so the sticky nav stays one row tall. */
+@media (max-width: 760px) {
+  .tab-nav__inner {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tab-nav__inner::-webkit-scrollbar {
+    display: none;
+  }
+  .tab-btn {
+    flex: 0 0 auto;
+  }
 }
 .tab-btn {
   font-family: var(--font-gi);
