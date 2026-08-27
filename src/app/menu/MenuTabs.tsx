@@ -45,7 +45,7 @@ export default function MenuTabs({
           >
             <div className="tab-btn__inner">
               <span className="tab-btn__label">Dinsdag Tapas</span>
-              <span className="tab-btn__hint">Elke dinsdagavond | Kleine gerechten om te delen</span>
+              <span className="tab-btn__hint">Elke dinsdagavond | Tapas &amp; tasting menu&apos;s</span>
             </div>
           </button>
         </div>

@@ -197,8 +197,16 @@ const ALaCarte = (
 const TuesdayTapas = (
   <>
     <p className="tasting-note rv" style={{ marginBottom: 'clamp(40px,5vw,60px)' }}>
-      Elke dinsdagavond serveren wij ons tapas-menu: een selectie kleine gerechten om te delen.
+      Elke dinsdagavond serveren wij ons tapas-menu: een selectie kleine gerechten om te delen,
+      of kies een van onze Asian Tasting menu&apos;s.
     </p>
+
+    <div className="cat-header rv">
+      <div className="cat-header__line" />
+      <h2>Asian Tasting</h2>
+      <div className="cat-header__line" />
+    </div>
+    {Tasting}
 
     <div className="cat-header rv">
       <div className="cat-header__line" />
