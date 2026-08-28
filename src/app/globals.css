@@ -124,3 +124,124 @@ a {
 .scroll-zoom.qp__zoom {
   position: absolute;
 }
+
+/* ClosureNotice: one-time site-wide announcement dialog. */
+.closure-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(6, 22, 17, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: closure-overlay-in 0.4s ease both;
+}
+.closure-panel {
+  position: relative;
+  width: min(460px, 100%);
+  background: #0b2d23;
+  color: #fff;
+  padding: clamp(36px, 6vw, 52px) clamp(28px, 5vw, 46px);
+  border-radius: 2px;
+  border: 1px solid rgba(252, 237, 136, 0.18);
+  text-align: center;
+  animation: closure-panel-in 0.55s cubic-bezier(0.19, 1, 0.22, 1) 0.1s both;
+}
+.closure-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #fced88;
+  margin-bottom: 16px;
+}
+.closure-title {
+  font-family: var(--font-cormorant), serif;
+  font-weight: 300;
+  font-size: clamp(26px, 5vw, 34px);
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.closure-body {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.68);
+  margin-bottom: 22px;
+}
+.closure-cta {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 30px;
+}
+.closure-cta a {
+  color: #fced88;
+  border-bottom: 1px solid rgba(252, 237, 136, 0.4);
+  padding-bottom: 1px;
+  transition: border-color 0.25s;
+}
+.closure-cta a:hover {
+  border-color: #fced88;
+}
+.closure-btn {
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #114032;
+  background: #fced88;
+  padding: 16px 38px;
+  border-radius: 1px;
+  border: 0;
+  cursor: pointer;
+}
+.closure-x {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.25s;
+}
+.closure-x:hover {
+  color: #fff;
+}
+@keyframes closure-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes closure-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .closure-overlay,
+  .closure-panel {
+    animation: none;
+  }
+}

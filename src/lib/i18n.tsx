@@ -272,6 +272,28 @@ const DICT: Dict = {
 
   // Press wall
   'press.eyebrow': { nl: 'In de pers', en: 'In the press' },
+
+  // Closure notice (Thursday 10 September 2026, private event)
+  'notice.eyebrow': { nl: 'Privé-evenement', en: 'Private event' },
+  'notice.title': {
+    nl: 'Donderdag 10 september gesloten',
+    en: 'Closed on Thursday 10 September',
+  },
+  'notice.body': {
+    nl:
+      'Op donderdag 10 september is Asian Glories exclusief gereserveerd voor een privé-evenement. Die dag zijn wij gesloten voor reguliere reserveringen. Wij verwelkomen u graag op een ander moment.',
+    en:
+      'On Thursday 10 September, Asian Glories is exclusively reserved for a private event. We are closed for regular reservations that day. We look forward to welcoming you another time.',
+  },
+  'notice.cta': {
+    nl: 'Wist u dat u Asian Glories ook kunt afhuren voor uw eigen evenement?',
+    en: 'Did you know you can also book Asian Glories for your own private event?',
+  },
+  'notice.cta.link': {
+    nl: 'Vraag naar de mogelijkheden',
+    en: 'Ask about the options',
+  },
+  'notice.close': { nl: 'Sluiten', en: 'Close' },
 };
 
 type Ctx = {

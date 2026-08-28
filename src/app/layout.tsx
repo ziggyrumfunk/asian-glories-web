@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant, DM_Sans } from 'next/font/google';
 import LoadingCurtain from '@/components/LoadingCurtain';
 import ZenchefWidget from '@/components/ZenchefWidget';
+import ClosureNotice from '@/components/ClosureNotice';
 import { I18nProvider } from '@/lib/i18n';
 import './globals.css';
 
@@ -98,7 +99,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantSchema) }}
         />
         <LoadingCurtain />
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          {children}
+          <ClosureNotice />
+        </I18nProvider>
         <ZenchefWidget />
       </body>
     </html>
