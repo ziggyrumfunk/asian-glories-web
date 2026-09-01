@@ -25,6 +25,7 @@ const DICT: Dict = {
   'nav.wine': { nl: 'Wijnkaart', en: 'Wine list' },
   'nav.book': { nl: 'Boek', en: 'Book' },
   'nav.events': { nl: 'Evenementen', en: 'Events' },
+  'nav.course': { nl: 'Kookcursus', en: 'Cooking course' },
   'nav.hours': { nl: 'Openingstijden', en: 'Hours' },
   'nav.contact': { nl: 'Contact', en: 'Contact' },
   'nav.reserve': { nl: 'Reserveer', en: 'Reserve' },
