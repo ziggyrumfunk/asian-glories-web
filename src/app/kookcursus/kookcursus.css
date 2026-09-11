@@ -357,6 +357,15 @@
 .kc-price__note + .kc-price__note {
   margin-top: 12px;
 }
+.kc-price__fine {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 12.5px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.45);
+}
 
 /* ---------- CTA ---------- */
 .kc-cta {
@@ -418,6 +427,41 @@
   color: #fced88;
   border-bottom: 1px solid rgba(252, 237, 136, 0.4);
   padding-bottom: 1px;
+}
+.kc-cta__fine {
+  margin-top: 30px;
+  font-size: 12.5px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.38);
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Floating reserve tab on the right edge. Mid-height keeps it clear of the
+   Zenchef button in the bottom-right corner. */
+.kc-float {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 250;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #114032;
+  background: #fced88;
+  padding: 18px 11px;
+  border-radius: 2px 0 0 2px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s, padding-right 0.3s;
+}
+.kc-float:hover {
+  background: #f5e26b;
+  padding-right: 15px;
 }
 
 /* Posters replace the ambient videos for reduced-motion visitors. */

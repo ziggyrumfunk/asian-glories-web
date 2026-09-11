@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import RevealScript from '@/components/Reveal';
@@ -8,15 +7,20 @@ import './kookcursus.css';
 export const metadata: Metadata = {
   title: 'Kookcursus Chinese Keuken | Asian Glories Rotterdam',
   description:
-    'Hands-on kookcursus met chef Kevin Fan bij Asian Glories Rotterdam. Leer dim sum vouwen en wokken op maandagmiddag, inclusief proeverij, recepten en frisdrank. €149 per persoon.',
+    'Hands-on kookcursus met chef Kevin Fan bij Asian Glories Rotterdam op woensdag 7 oktober. Leer dim sum vouwen en wokken, inclusief proeverij en recepten. €149 per persoon, beperkt aantal plekken.',
   alternates: { canonical: '/kookcursus' },
   openGraph: {
     title: 'Kookcursus Chinese Keuken | Asian Glories Rotterdam',
     description:
-      'Leer dim sum vouwen en wokken met chef Kevin Fan. Elke maandagmiddag bij Asian Glories Rotterdam.',
+      'Leer dim sum vouwen en wokken met chef Kevin Fan op woensdag 7 oktober. Beperkt aantal plekken.',
     images: ['/videos/kookcursus-hero-poster.jpg'],
   },
 };
+
+/* Booking runs by email; keep every reserve action on the same address. */
+const RESERVE_MAILTO =
+  'mailto:info@asianglories.nl?subject=Kookcursus%207%20oktober';
+const GIFT_MAILTO = 'mailto:info@asianglories.nl?subject=Kookcursus%20cadeau%20geven';
 
 const courseSchema = {
   '@context': 'https://schema.org',
@@ -46,12 +50,8 @@ const courseSchema = {
   hasCourseInstance: {
     '@type': 'CourseInstance',
     courseMode: 'Onsite',
-    courseSchedule: {
-      '@type': 'Schedule',
-      byDay: 'https://schema.org/Monday',
-      startTime: '11:30',
-      endTime: '16:00',
-    },
+    startDate: '2026-10-07T16:30:00+02:00',
+    endDate: '2026-10-07T20:30:00+02:00',
   },
 };
 
@@ -102,20 +102,21 @@ export default function KookcursusPage() {
         />
         <div className="kc-hero__ov" />
         <div className="kc-hero__inner">
-          <p className="kc-eyebrow rv">Elke maandagmiddag &middot; Rotterdam</p>
+          <p className="kc-eyebrow rv">Woensdag 7 oktober &middot; Rotterdam</p>
           <h1 className="kc-hero__title rv d1">
             Kookcursus
             <br />
             <em>Chinese keuken</em>
           </h1>
           <p className="kc-hero__sub rv d2">
-            Een middag hands-on koken met chef Kevin Fan. Leer dim sum vouwen, sta zelf achter
-            de wok en sluit af met een gezamenlijke proeverij van uw eigen gerechten.
+            Hands-on koken met chef Kevin Fan. Leer dim sum vouwen, sta zelf achter de wok en
+            sluit af met een gezamenlijke proeverij van uw eigen gerechten. Het aantal plekken
+            is beperkt.
           </p>
           <div className="kc-hero__ctas rv d3">
-            <Link href="/reserveer" className="kc-btn">
-              Reserveer uw plek
-            </Link>
+            <a href={RESERVE_MAILTO} className="kc-btn">
+              Reserveer per e-mail
+            </a>
             <a href="#programma" className="kc-ghostlink">
               Bekijk het programma
             </a>
@@ -140,7 +141,9 @@ export default function KookcursusPage() {
             <div className="kc-facts">
               <div className="kc-fact rv">
                 <p className="kc-fact__k">Wanneer</p>
-                <p className="kc-fact__v">Elke maandagmiddag, 11:30 &ndash; 16:00</p>
+                <p className="kc-fact__v">
+                  Woensdag 7 oktober &middot; inloop 16:00, start 16:30 (circa 4 uur)
+                </p>
               </div>
               <div className="kc-fact rv d1">
                 <p className="kc-fact__k">Waar</p>
@@ -270,6 +273,10 @@ export default function KookcursusPage() {
               <p className="kc-price__note">
                 Huiswijn en bier zijn tijdens de cursus apart bij te bestellen (pin).
               </p>
+              <p className="kc-price__fine">
+                De cursus gaat door bij minimaal 8 deelnemers. Bij onvoldoende aanmeldingen
+                annuleren wij uiterlijk een week van tevoren.
+              </p>
             </div>
           </div>
         </section>
@@ -290,22 +297,31 @@ export default function KookcursusPage() {
               <em>de wok</em> te staan?
             </h2>
             <p className="kc-cta__text rv d2">
-              Reserveren kan via de reserveerknop rechtsonder op deze pagina. Het aantal plekken
-              per cursus is beperkt.
+              Reserveer uw plek door ons een e-mail te sturen met uw naam, het aantal personen
+              en eventuele allergie&euml;n. Vol is vol: maximaal 10 plekken per cursus.
             </p>
             <div className="rv d3">
-              <Link href="/reserveer" className="kc-btn">
-                Reserveer uw plek
-              </Link>
+              <a href={RESERVE_MAILTO} className="kc-btn">
+                Reserveer per e-mail
+              </a>
             </div>
             <p className="kc-cta__alt rv d4">
-              Liever persoonlijk? Bel{' '}
-              <a href="tel:+31641850183">06 41 850 183</a> of mail{' '}
-              <a href="mailto:info@asianglories.nl?subject=Kookcursus">info@asianglories.nl</a>.
+              Cadeautip: de kookcursus is ook <a href={GIFT_MAILTO}>cadeau te geven</a>. Liever
+              persoonlijk contact? Bel <a href="tel:+31641850183">06 41 850 183</a>.
+            </p>
+            <p className="kc-cta__fine rv d4">
+              De cursus gaat door bij minimaal 8 deelnemers; bij onvoldoende aanmeldingen
+              annuleren wij uiterlijk een week van tevoren.
             </p>
           </div>
         </section>
       </main>
+
+      {/* Floating reserve tab, pinned to the right edge of the viewport.
+          Mid-height, so it never collides with the Zenchef button bottom-right. */}
+      <a href={RESERVE_MAILTO} className="kc-float">
+        Reserveer nu &middot; beperkte plekken
+      </a>
 
       <Footer />
     </>
