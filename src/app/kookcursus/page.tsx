@@ -176,7 +176,7 @@ export default function KookcursusPage() {
             <div>
               <p className="kc-eyebrow rv">Programma van de middag</p>
               <h2 className="kc-prog__title rv d1">
-                Van siu mai vouwen
+                Van dim sum vouwen
                 <br />
                 tot <em>wok hei</em>
               </h2>
@@ -191,25 +191,25 @@ export default function KookcursusPage() {
               <div className="kc-step rv">
                 <h3>Dim sum maken</h3>
                 <p>
-                  <strong>Garnalen siu mai met shiitake.</strong> U leert het vouwen en stomen
-                  zelf, en natuurlijk wordt er geproefd.
+                  U maakt een variatie aan dim sum en leert het vouwen en stomen zelf. En
+                  natuurlijk wordt er tussendoor geproefd.
                 </p>
               </div>
               <div className="kc-step rv">
                 <h3>Achter de wok</h3>
                 <p>
-                  Drie gerechten uit onze eigen keuken: <strong>charsiew</strong> met
-                  huisgemaakte marinade, <strong>gewokte groenten</strong> met
-                  shimeji-paddenstoelen en <strong>gebakken rijst</strong> met groenten en ei.
-                  Met aandacht voor woktechniek, balans in smaken, mise en place en samenwerking
-                  in de keuken.
+                  Daarna staat u zelf achter de wok voor een selectie wokgerechten uit onze
+                  eigen keuken, met aandacht voor woktechniek, balans in smaken, mise en place
+                  en samenwerking in de keuken.
                 </p>
               </div>
               <div className="kc-step rv">
                 <h3>Gezamenlijke proeverij</h3>
                 <p>
-                  We sluiten af aan tafel en genieten samen van de zelfgemaakte gerechten, met
-                  ruimte voor vragen en tips van de chef.
+                  We sluiten af aan tafel met het menu van <strong>vier gangen</strong> dat u
+                  zelf heeft bereid: dim sum, wokgerechten en meer. Reken op ruim voldoende
+                  eten; niemand gaat met honger naar huis. Uiteraard met ruimte voor vragen en
+                  tips van de chef.
                 </p>
               </div>
             </div>
@@ -219,8 +219,8 @@ export default function KookcursusPage() {
         {/* MARQUEE */}
         <div className="kc-marquee" aria-hidden="true">
           <div className="kc-marquee__track">
-            <span>Dim Sum &middot; Wok Hei &middot; Charsiew &middot;</span>
-            <span>Dim Sum &middot; Wok Hei &middot; Charsiew &middot;</span>
+            <span>Dim Sum &middot; Wok Hei &middot; Vier Gangen &middot;</span>
+            <span>Dim Sum &middot; Wok Hei &middot; Vier Gangen &middot;</span>
           </div>
         </div>
 
