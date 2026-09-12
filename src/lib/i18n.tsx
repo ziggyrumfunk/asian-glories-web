@@ -274,27 +274,32 @@ const DICT: Dict = {
   // Press wall
   'press.eyebrow': { nl: 'In de pers', en: 'In the press' },
 
-  // Closure notice (Thursday 10 September 2026, private event)
-  'notice.eyebrow': { nl: 'Privé-evenement', en: 'Private event' },
-  'notice.title': {
-    nl: 'Donderdag 10 september gesloten',
-    en: 'Closed on Thursday 10 September',
-  },
-  'notice.body': {
+  // Cooking course popup (until 7 October 2026)
+  'kookpop.eyebrow': { nl: 'Woensdag 7 oktober', en: 'Wednesday 7 October' },
+  'kookpop.title': { nl: 'Kookcursus Chinese keuken', en: 'Chinese cooking course' },
+  'kookpop.body': {
     nl:
-      'Op donderdag 10 september is Asian Glories exclusief gereserveerd voor een privé-evenement. Die dag zijn wij gesloten voor reguliere reserveringen. Wij verwelkomen u graag op een ander moment.',
+      'Hands-on koken met chef Kevin: dim sum vouwen, zelf wokken en afsluiten met een viergangenmenu van eigen hand. Het aantal plekken is beperkt.',
     en:
-      'On Thursday 10 September, Asian Glories is exclusively reserved for a private event. We are closed for regular reservations that day. We look forward to welcoming you another time.',
+      'Hands-on cooking with chef Kevin: fold dim sum, work the wok and finish with a four-course menu you cooked yourself. Spots are limited.',
   },
-  'notice.cta': {
-    nl: 'Wist u dat u Asian Glories ook kunt afhuren voor uw eigen evenement?',
-    en: 'Did you know you can also book Asian Glories for your own private event?',
+  'kookpop.btn': { nl: 'Bekijk de kookcursus', en: 'View the cooking course' },
+  'kookpop.close': { nl: 'Sluiten', en: 'Close' },
+
+  // Kookcursus band on the home page
+  'home.course.label': {
+    nl: 'Kookcursus · Woensdag 7 oktober',
+    en: 'Cooking course · Wednesday 7 October',
   },
-  'notice.cta.link': {
-    nl: 'Vraag naar de mogelijkheden',
-    en: 'Ask about the options',
+  'home.course.title1': { nl: 'Zelf leren koken', en: 'Learn to cook' },
+  'home.course.title2': { nl: 'met chef Kevin', en: 'with chef Kevin' },
+  'home.course.txt': {
+    nl:
+      'Een hands-on kookcursus in ons eigen restaurant: dim sum vouwen, zelf wokken en afsluiten met een viergangenmenu van eigen hand. Het aantal plekken is beperkt.',
+    en:
+      'A hands-on cooking course in our own restaurant: fold dim sum, work the wok and finish with a four-course menu you cooked yourself. Spots are limited.',
   },
-  'notice.close': { nl: 'Sluiten', en: 'Close' },
+  'home.course.btn': { nl: 'Bekijk de kookcursus', en: 'View the cooking course' },
 };
 
 type Ctx = {

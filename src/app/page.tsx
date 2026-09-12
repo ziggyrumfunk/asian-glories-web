@@ -359,6 +359,31 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* KOOKCURSUS */}
+        <section className="kk">
+          <div className="kk__in">
+            <div className="kk__media rv">
+              <img
+                src="/videos/kookcursus-hero-poster.jpg"
+                alt="Kookcursus Chinese keuken bij Asian Glories"
+                loading="lazy"
+              />
+            </div>
+            <div className="kk__txt">
+              <p className="kk__ey rv">{t('home.course.label')}</p>
+              <h2 className="rv d1">
+                {t('home.course.title1')}
+                <br />
+                <em>{t('home.course.title2')}</em>
+              </h2>
+              <p className="kk__p rv d2">{t('home.course.txt')}</p>
+              <Link href="/kookcursus" className="btn-g rv d3">
+                {t('home.course.btn')}
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* QUOTE PARALLAX — Ken Burns zoom on scroll */}
         <div className="qp">
           <ScrollZoom src="/images/table-with-many-dishes.jpg" alt="" className="qp__zoom" from={1.22} to={1.0} />

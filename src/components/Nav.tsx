@@ -14,6 +14,7 @@ export default function Nav() {
     { href: '/menu', label: t('nav.menu') },
     { href: '/wijnkaart', label: t('nav.wine') },
     { href: '/boek', label: t('nav.book') },
+    { href: '/kookcursus', label: t('nav.course') },
     { href: '/#evenementen', label: t('nav.events') },
     { href: '/#openingstijden', label: t('nav.hours') },
     { href: '/#contact', label: t('nav.contact') },
@@ -60,7 +61,8 @@ export default function Nav() {
           />
         </Link>
 
-        <ul className="hidden md:flex list-none gap-[34px] items-center">
+        {/* Eight links only fit from ~1280px; below that the fullscreen menu takes over. */}
+        <ul className="hidden xl:flex list-none gap-[20px] 2xl:gap-[32px] items-center">
           {links.map((l) => (
             <li key={l.href}>
               <Link
@@ -104,7 +106,7 @@ export default function Nav() {
 
         {/* Mobile: language toggle lives in the top bar (bottom of the screen is
             occupied by the floating Zenchef reservation button). */}
-        <div className="md:hidden flex items-center gap-4">
+        <div className="xl:hidden flex items-center gap-4">
           <div className="flex items-center gap-1 text-[11px] tracking-[0.18em] uppercase text-white/70">
             <button
               type="button"

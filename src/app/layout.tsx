@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant, DM_Sans } from 'next/font/google';
 import LoadingCurtain from '@/components/LoadingCurtain';
 import ZenchefWidget from '@/components/ZenchefWidget';
-import ClosureNotice from '@/components/ClosureNotice';
+import KookcursusNotice from '@/components/KookcursusNotice';
 import { I18nProvider } from '@/lib/i18n';
 import './globals.css';
 
@@ -101,7 +101,7 @@ export default function RootLayout({
         <LoadingCurtain />
         <I18nProvider>
           {children}
-          <ClosureNotice />
+          <KookcursusNotice />
         </I18nProvider>
         <ZenchefWidget />
       </body>
