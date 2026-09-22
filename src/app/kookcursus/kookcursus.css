@@ -103,6 +103,43 @@
   border-color: #fced88;
 }
 
+/* ---------- URGENCY STRIP ---------- */
+.kc-urgent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #fced88;
+  color: #114032;
+  padding: 15px var(--pad);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background 0.3s;
+}
+.kc-urgent:hover {
+  background: #f5e26b;
+}
+.kc-urgent__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #114032;
+  flex: 0 0 auto;
+  animation: kc-pulse 1.8s ease-in-out infinite;
+}
+@keyframes kc-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
 /* ---------- INTRO ---------- */
 .kc-intro {
   background: #faf7f0;
@@ -417,6 +454,35 @@
   max-width: 520px;
   margin: 0 auto 36px;
 }
+/* How-to row pointing at the Zenchef button bottom-right. */
+.kc-cta__how {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+  border: 1px solid rgba(252, 237, 136, 0.35);
+  border-radius: 2px;
+  padding: 20px 28px;
+}
+.kc-cta__how-arrow {
+  font-family: var(--font-cormorant), serif;
+  font-size: 34px;
+  line-height: 1;
+  color: #fced88;
+}
+.kc-cta__how-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.kc-cta__how-sub {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
 .kc-cta__alt {
   margin-top: 26px;
   font-size: 14px;
@@ -427,6 +493,9 @@
   color: #fced88;
   border-bottom: 1px solid rgba(252, 237, 136, 0.4);
   padding-bottom: 1px;
+}
+.kc-cta__alt + .kc-cta__alt {
+  margin-top: 10px;
 }
 .kc-cta__fine {
   margin-top: 30px;
@@ -476,6 +545,9 @@
     display: block;
   }
   .kc-marquee__track {
+    animation: none;
+  }
+  .kc-urgent__dot {
     animation: none;
   }
   .kc-band__item img {

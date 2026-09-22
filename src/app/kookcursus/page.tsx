@@ -114,8 +114,8 @@ export default function KookcursusPage() {
             is beperkt.
           </p>
           <div className="kc-hero__ctas rv d3">
-            <a href={RESERVE_MAILTO} className="kc-btn">
-              Reserveer per e-mail
+            <a href="#aanmelden" className="kc-btn">
+              Reserveer uw plek
             </a>
             <a href="#programma" className="kc-ghostlink">
               Bekijk het programma
@@ -123,6 +123,12 @@ export default function KookcursusPage() {
           </div>
         </div>
       </header>
+
+      {/* URGENCY STRIP */}
+      <a href="#aanmelden" className="kc-urgent">
+        <span className="kc-urgent__dot" aria-hidden="true" />
+        Bijna vol: nog enkele plekken voor woensdag 7 oktober
+      </a>
 
       <main>
         {/* INTRO */}
@@ -282,7 +288,7 @@ export default function KookcursusPage() {
         </section>
 
         {/* CTA */}
-        <section className="kc-cta">
+        <section className="kc-cta" id="aanmelden">
           <AmbientVideo
             className="kc-cta__media"
             src="/videos/kookcursus-interieur.mp4"
@@ -297,17 +303,26 @@ export default function KookcursusPage() {
               <em>de wok</em> te staan?
             </h2>
             <p className="kc-cta__text rv d2">
-              Reserveer uw plek door ons een e-mail te sturen met uw naam, het aantal personen
-              en eventuele allergie&euml;n. Vol is vol: maximaal 10 plekken per cursus.
+              Reserveren gaat via onze reserveringswidget. Klik op de groene reserveerknop
+              rechtsonder en kies <strong>woensdag 7 oktober</strong> en uw aantal personen.
+              Vol is vol: maximaal 10 plekken per cursus.
             </p>
-            <div className="rv d3">
-              <a href={RESERVE_MAILTO} className="kc-btn">
-                Reserveer per e-mail
-              </a>
+            <div className="kc-cta__how rv d3">
+              <span className="kc-cta__how-arrow" aria-hidden="true">
+                &#8600;
+              </span>
+              <div className="kc-cta__how-txt">
+                <p className="kc-cta__how-label">Gebruik de reserveerknop rechtsonder</p>
+                <p className="kc-cta__how-sub">Kies woensdag 7 oktober in de widget</p>
+              </div>
             </div>
             <p className="kc-cta__alt rv d4">
-              Cadeautip: de kookcursus is ook <a href={GIFT_MAILTO}>cadeau te geven</a>. Liever
-              persoonlijk contact? Bel <a href="tel:+31641850183">06 41 850 183</a>.
+              Lukt het niet via de widget? Mail{' '}
+              <a href={RESERVE_MAILTO}>info@asianglories.nl</a> of bel{' '}
+              <a href="tel:+31641850183">06 41 850 183</a>.
+            </p>
+            <p className="kc-cta__alt rv d4">
+              Cadeautip: de kookcursus is ook <a href={GIFT_MAILTO}>cadeau te geven</a>.
             </p>
             <p className="kc-cta__fine rv d4">
               De cursus gaat door bij minimaal 8 deelnemers; bij onvoldoende aanmeldingen
@@ -319,8 +334,8 @@ export default function KookcursusPage() {
 
       {/* Floating reserve tab, pinned to the right edge of the viewport.
           Mid-height, so it never collides with the Zenchef button bottom-right. */}
-      <a href={RESERVE_MAILTO} className="kc-float">
-        Reserveer nu &middot; beperkte plekken
+      <a href="#aanmelden" className="kc-float">
+        Reserveer nu &middot; bijna vol
       </a>
 
       <Footer />
