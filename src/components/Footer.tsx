@@ -56,7 +56,7 @@ export default function Footer() {
             style={{ borderBottom: '1px solid rgba(255,255,255,0.18)', paddingBottom: 1 }}
             title="Webdesign &amp; webdevelopment Rotterdam door Rumfunk"
           >
-            Rumfunk &mdash; Webdesign Rotterdam
+            Rumfunk &middot; Webdesign Rotterdam
           </a>
         </p>
       </div>

@@ -42,8 +42,8 @@ const DICT: Dict = {
 
   // ---- Homepage ----
   'home.hero.kicker': {
-    nl: 'Rotterdam — Kantonees & Sichuan',
-    en: 'Rotterdam — Cantonese & Sichuan',
+    nl: 'Rotterdam · Kantonees & Sichuan',
+    en: 'Rotterdam · Cantonese & Sichuan',
   },
   'home.hero.title1': { nl: 'Waar elke maaltijd', en: 'Where every meal' },
   'home.hero.title2': { nl: 'een', en: 'tells a' },
@@ -62,7 +62,7 @@ const DICT: Dict = {
   'home.menucta.label': { nl: 'Onze menukaart', en: 'Our menu' },
   'home.menucta.desc': {
     nl:
-      'Kantonese klassiekers, Sichuan specialiteiten, handgemaakte dim sum en verfijnde zeevruchtgerechten',
+      'Kantonese klassiekers, Sichuan-specialiteiten, handgemaakte dim sum en verfijnde zeevruchtgerechten',
     en:
       'Cantonese classics, Sichuan specialties, handmade dim sum and refined seafood dishes',
   },
@@ -74,13 +74,13 @@ const DICT: Dict = {
   'home.about.title2': { nl: 'hedendaagse ziel', en: 'contemporary soul' },
   'home.about.body1': {
     nl:
-      'Asian Glories is geboren vanuit een diepe liefde voor de rijke culinaire tradities van China. In het hart van Rotterdam bieden wij een eetervaring waarbij authenticiteit en moderniteit samensmelten, in elke saus, elke bereiding, elk gerecht.',
+      'Asian Glories is ontstaan uit een diepe liefde voor de rijke culinaire tradities van China. In het hart van Rotterdam bieden wij een eetervaring waarbij authenticiteit en moderniteit samensmelten, in elke saus, elke bereiding, elk gerecht.',
     en:
       "Asian Glories was born from a deep love for the rich culinary traditions of China. In the heart of Rotterdam, we offer a dining experience where authenticity and modernity meet in every sauce, every preparation, every dish.",
   },
   'home.about.body2': {
     nl:
-      'Van handgemaakte dim sum tot de traditioneel bereide Peking eend met vers gemaakte pannenkoekjes, elk bord vertelt het verhaal van ambacht, pure smaken en generaties aan vakmanschap.',
+      'Van handgemaakte dim sum tot de traditioneel bereide Pekingeend met vers gemaakte pannenkoekjes: elk bord vertelt een verhaal van ambacht, pure smaken en generaties vakmanschap.',
     en:
       'From handmade dim sum to traditional Peking duck with freshly made pancakes, every plate tells a story of craft, pure flavours and generations of mastery.',
   },
@@ -92,7 +92,7 @@ const DICT: Dict = {
   'home.feature.title2': { nl: '& Sichuan', en: '& Sichuan' },
   'home.feature.body': {
     nl:
-      'Twee grote tradities van de Chinese keuken, elk met hun eigen karakter en ziel. Delicate Kantonese smaken naast de intense, geurige wereld van Sichuan.',
+      'Twee grote tradities van de Chinese keuken, elk met een eigen karakter en ziel. Delicate Kantonese smaken naast de intense, geurige wereld van Sichuan.',
     en:
       'Two great traditions of Chinese cuisine, each with their own character and soul. Delicate Cantonese flavours alongside the intense, aromatic world of Sichuan.',
   },
@@ -100,17 +100,17 @@ const DICT: Dict = {
 
   // Dishes section
   'home.dishes.label': { nl: 'Onze gerechten', en: 'Our dishes' },
-  'home.dishes.title1': { nl: 'Signature', en: 'Signature' },
-  'home.dishes.title2': { nl: 'gerechten', en: 'dishes' },
+  'home.dishes.title1': { nl: 'Specialiteiten', en: 'Signature' },
+  'home.dishes.title2': { nl: 'van het huis', en: 'dishes' },
   'home.dishes.link': { nl: 'Volledige kaart →', en: 'Full menu →' },
   'home.dishes.shared.name': { nl: 'Shared dining', en: 'Shared dining' },
   'home.dishes.shared.desc': {
-    nl: 'Onze keuken in een gedeelde setting',
+    nl: 'Meerdere gerechten om samen te delen',
     en: 'Our kitchen in a shared setting',
   },
   'home.dishes.dimsum.name': { nl: 'Handgemaakte dim sum', en: 'Handmade dim sum' },
   'home.dishes.dimsum.desc': {
-    nl: 'Dagelijks vers in de keuken bereid',
+    nl: 'Dagelijks vers bereid in onze keuken',
     en: 'Made fresh in the kitchen daily',
   },
   'home.dishes.siuyuk.name': { nl: 'Siu-Yuk', en: 'Siu-Yuk' },
@@ -135,7 +135,7 @@ const DICT: Dict = {
   'home.more.title2': { nl: '& erkenning', en: '& recognition' },
   'home.more.body': {
     nl:
-      'Stap binnen in onze keuken en zie hoe traditionele technieken tot leven komen. Elke beweging, elke timing, elk detail is het resultaat van jarenlange toewijding, en dat blijft niet onopgemerkt.',
+      'Neem een kijkje in onze keuken en ontdek hoe traditionele technieken tot leven komen. Elke beweging, elke timing, elk detail is het resultaat van jarenlange toewijding, en dat blijft niet onopgemerkt.',
     en:
       'Step into our kitchen and see traditional techniques come to life. Every motion, every timing, every detail is the result of years of dedication, and it does not go unnoticed.',
   },
@@ -161,13 +161,13 @@ const DICT: Dict = {
 
   // Events
   'home.events.label': { nl: 'Evenementen', en: 'Events' },
-  'home.events.title1': { nl: 'Gelegenheden', en: 'Occasions' },
+  'home.events.title1': { nl: 'Momenten', en: 'Occasions' },
   'home.events.title2': { nl: 'om te vieren', en: 'to celebrate' },
   'home.events.cta': { nl: 'Neem contact op', en: 'Get in touch' },
-  'home.events.private.title': { nl: 'Privé diners', en: 'Private dinners' },
+  'home.events.private.title': { nl: 'Privédiners', en: 'Private dinners' },
   'home.events.private.txt': {
     nl:
-      'Boek ons restaurant voor verjaardagen, jubilea of zakelijke bijeenkomsten in stijl.',
+      'Huur ons restaurant af voor een verjaardag, jubileum of zakelijk diner.',
     en:
       'Book our restaurant for birthdays, anniversaries or business gatherings in style.',
   },
@@ -179,23 +179,23 @@ const DICT: Dict = {
   'home.events.shared.title': { nl: 'Shared dining', en: 'Shared dining' },
   'home.events.shared.txt': {
     nl:
-      'Ervaar onze keuken in een gezellige, gedeelde setting met meerdere bereidingen aan tafel.',
+      'Proef de breedte van onze keuken: meerdere gerechten op tafel, om samen te delen.',
     en:
       'Experience our kitchen in an intimate, shared setting with multiple preparations at the table.',
   },
   'home.events.corp.title': { nl: 'Bedrijfsevents', en: 'Corporate events' },
   'home.events.corp.txt': {
     nl:
-      'Indruk maken op klanten of het team belonen, in een unieke culinaire omgeving.',
+      'Indruk maken op relaties of het team belonen, in een bijzondere culinaire omgeving.',
     en: 'Impress clients or reward your team in a unique culinary setting.',
   },
 
   // Quote
   'home.quote.text': {
-    nl: 'Een verfijnde Chinese keuken die de smaak van Rotterdam blijft definiëren.',
+    nl: 'Een verfijnde Chinese keuken die de smaak van Rotterdam blijft bepalen.',
     en: 'A refined Chinese kitchen that keeps defining the taste of Rotterdam.',
   },
-  'home.quote.attr': { nl: 'Pers — Asian Glories', en: 'Press — Asian Glories' },
+  'home.quote.attr': { nl: 'Asian Glories', en: 'Asian Glories' },
 
   // Reservation
   'home.reserve.eyebrow': { nl: 'Reserveer een tafel', en: 'Reserve a table' },
@@ -208,7 +208,7 @@ const DICT: Dict = {
   'home.info.contact': { nl: 'Contact', en: 'Contact' },
   'home.info.follow': { nl: 'Volg ons', en: 'Follow us' },
   'home.info.followtxt': {
-    nl: 'Op de hoogte blijven van nieuwe gerechten, evenementen en culinaire avonden.',
+    nl: 'Blijf op de hoogte van nieuwe gerechten, evenementen en culinaire avonden.',
     en: 'Stay up to date on new dishes, events and culinary evenings.',
   },
   'home.info.address': { nl: 'Adres', en: 'Address' },
@@ -237,7 +237,7 @@ const DICT: Dict = {
       'Voor grotere gezelschappen of speciale gelegenheden kunt u ook contact opnemen via',
     en: 'For larger parties or special occasions please reach out via',
   },
-  'reserveer.intro2.or': { nl: 'of bellen via', en: 'or call' },
+  'reserveer.intro2.or': { nl: 'of bellen naar', en: 'or call' },
   'reserveer.cta.label': {
     nl: 'Gebruik de reserveringsknop rechtsonder',
     en: 'Use the booking button at the bottom-right',
@@ -250,13 +250,13 @@ const DICT: Dict = {
   'reserveer.kreeft.title': { nl: 'Canadese kreeft', en: 'Canadian lobster' },
   'reserveer.kreeft.text': {
     nl:
-      'De Canadese kreeft is uitsluitend beschikbaar op voorbestelling. Geef bij uw reservering aan dat u kreeft wenst, minimaal 2 dagen voor uw bezoek. Zo kunnen wij zorgen voor de beste kwaliteit.',
+      'Canadese kreeft is alleen op voorbestelling verkrijgbaar. Geef minimaal twee dagen voor uw bezoek bij uw reservering aan dat u kreeft wenst, zodat wij kunnen zorgen voor de beste kwaliteit.',
     en:
       'Canadian lobster is available by pre-order only. Mention at the time of booking that you wish to have lobster, at least 2 days before your visit, so we can source the best quality.',
   },
   'reserveer.phone.title': { nl: 'Liever telefonisch?', en: 'Prefer to call?' },
   'reserveer.phone.text': {
-    nl: 'U kunt ook bellen via',
+    nl: 'U kunt ons ook bellen op',
     en: 'You can also call us at',
   },
   'reserveer.phone.or': { nl: 'of mailen naar', en: 'or email us at' },

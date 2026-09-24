@@ -57,7 +57,7 @@ export default function PressWall({ variant = 'section' }: { variant?: 'section'
   return (
     <Wrapper
       className={`press press--${variant}`}
-      aria-label="In the press"
+      aria-label="In de pers"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

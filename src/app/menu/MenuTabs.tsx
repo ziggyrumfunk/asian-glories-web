@@ -17,7 +17,7 @@ export default function MenuTabs({
 
   return (
     <>
-      <nav className="tab-nav" aria-label="Menu categorieen">
+      <nav className="tab-nav" aria-label="Menucategorieën">
         <div className="tab-nav__inner">
           <button
             className={`tab-btn ${active === 'tasting' ? 'active' : ''}`}

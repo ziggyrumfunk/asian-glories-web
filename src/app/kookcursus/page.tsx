@@ -5,27 +5,25 @@ import RevealScript from '@/components/Reveal';
 import './kookcursus.css';
 
 export const metadata: Metadata = {
-  title: 'Kookcursus Chinese Keuken | Asian Glories Rotterdam',
+  title: 'Kookcursus Chinese keuken | Asian Glories Rotterdam',
   description:
     'Hands-on kookcursus met chef Kevin Fan bij Asian Glories Rotterdam op woensdag 7 oktober. Leer dim sum vouwen en wokken, inclusief proeverij en recepten. €149 per persoon, beperkt aantal plekken.',
   alternates: { canonical: '/kookcursus' },
   openGraph: {
-    title: 'Kookcursus Chinese Keuken | Asian Glories Rotterdam',
+    title: 'Kookcursus Chinese keuken | Asian Glories Rotterdam',
     description:
       'Leer dim sum vouwen en wokken met chef Kevin Fan op woensdag 7 oktober. Beperkt aantal plekken.',
     images: ['/videos/kookcursus-hero-poster.jpg'],
   },
 };
 
-/* Booking runs by email; keep every reserve action on the same address. */
-const RESERVE_MAILTO =
-  'mailto:info@asianglories.nl?subject=Kookcursus%207%20oktober';
+/* Reservations run only through the Zenchef widget; email is for gift requests. */
 const GIFT_MAILTO = 'mailto:info@asianglories.nl?subject=Kookcursus%20cadeau%20geven';
 
 const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'Kookcursus Chinese Keuken met Chef Kevin',
+  name: 'Kookcursus Chinese keuken met chef Kevin',
   description:
     'Hands-on kookcursus in de Chinese keuken bij Asian Glories Rotterdam: dim sum vouwen en stomen, wokken en een gezamenlijke proeverij, onder leiding van chef Kevin Fan.',
   provider: {
@@ -136,13 +134,13 @@ export default function KookcursusPage() {
           <div className="kc-intro__inner">
             <p className="kc-label rv">De cursus</p>
             <p className="kc-intro__lead rv d1">
-              De basis van de Chinese keuken, geleerd op de plek waar hij elke avond wordt
-              gekookt: <em>in onze eigen keuken</em>.
+              De basis van de Chinese keuken, geleerd op de plek waar die elke avond op tafel
+              komt: <em>in onze eigen keuken</em>.
             </p>
             <p className="kc-intro__body rv d2">
               De cursus is geschikt voor zowel individuele deelnemers als groepen. Ervaring is
-              niet nodig; enthousiasme wel. U werkt in duo&apos;s of kleine groepjes en gaat naar
-              huis met de recepten en met technieken die u thuis direct kunt gebruiken.
+              niet nodig; enthousiasme wel. U werkt in duo&apos;s of kleine groepjes en neemt de
+              recepten mee naar huis, samen met technieken die u direct zelf kunt toepassen.
             </p>
             <div className="kc-facts">
               <div className="kc-fact rv">
@@ -180,7 +178,7 @@ export default function KookcursusPage() {
               </div>
             </div>
             <div>
-              <p className="kc-eyebrow rv">Programma van de middag</p>
+              <p className="kc-eyebrow rv">Het programma</p>
               <h2 className="kc-prog__title rv d1">
                 Van dim sum vouwen
                 <br />
@@ -190,14 +188,14 @@ export default function KookcursusPage() {
                 <h3>Welkom &amp; introductie</h3>
                 <p>
                   Een korte uitleg over de Chinese keuken, de ingredi&euml;nten en de
-                  kooktechnieken van vandaag. Daarna verdelen we de groep in duo&apos;s of kleine
+                  technieken die u vandaag leert. Daarna verdelen we de groep in duo&apos;s of kleine
                   groepjes.
                 </p>
               </div>
               <div className="kc-step rv">
                 <h3>Dim sum maken</h3>
                 <p>
-                  U maakt een variatie aan dim sum en leert het vouwen en stomen zelf. En
+                  U maakt verschillende soorten dim sum en leert zelf vouwen en stomen. En
                   natuurlijk wordt er tussendoor geproefd.
                 </p>
               </div>
@@ -277,7 +275,7 @@ export default function KookcursusPage() {
                 Groepsreserveringen van 10 personen ontvangen 10% korting.
               </p>
               <p className="kc-price__note">
-                Huiswijn en bier zijn tijdens de cursus apart bij te bestellen (pin).
+                Huiswijn en bier zijn tijdens de cursus apart bij te bestellen (alleen pin).
               </p>
               <p className="kc-price__fine">
                 De cursus gaat door bij minimaal 8 deelnemers. Bij onvoldoende aanmeldingen
@@ -303,7 +301,7 @@ export default function KookcursusPage() {
               <em>de wok</em> te staan?
             </h2>
             <p className="kc-cta__text rv d2">
-              Reserveren gaat via onze reserveringswidget. Klik op de groene reserveerknop
+              Reserveren gaat via onze reserveringswidget. Klik op de groene reserveringsknop
               rechtsonder en kies <strong>woensdag 7 oktober</strong> en uw aantal personen.
               Vol is vol: maximaal 10 plekken per cursus.
             </p>
@@ -312,15 +310,10 @@ export default function KookcursusPage() {
                 &#8600;
               </span>
               <div className="kc-cta__how-txt">
-                <p className="kc-cta__how-label">Gebruik de reserveerknop rechtsonder</p>
+                <p className="kc-cta__how-label">Gebruik de reserveringsknop rechtsonder</p>
                 <p className="kc-cta__how-sub">Kies woensdag 7 oktober in de widget</p>
               </div>
             </div>
-            <p className="kc-cta__alt rv d4">
-              Lukt het niet via de widget? Mail{' '}
-              <a href={RESERVE_MAILTO}>info@asianglories.nl</a> of bel{' '}
-              <a href="tel:+31641850183">06 41 850 183</a>.
-            </p>
             <p className="kc-cta__alt rv d4">
               Cadeautip: de kookcursus is ook <a href={GIFT_MAILTO}>cadeau te geven</a>.
             </p>

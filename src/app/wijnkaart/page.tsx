@@ -8,7 +8,7 @@ import './wijnkaart.css';
 export const metadata: Metadata = {
   title: 'Wijnkaart | Asian Glories Rotterdam',
   description:
-    'Onze wijnkaart: zorgvuldig geselecteerde wijnen die de Kantonese en Sichuan keuken complementeren.',
+    'Onze wijnkaart: zorgvuldig geselecteerde wijnen die goed samengaan met de Kantonese en Sichuanese keuken.',
   alternates: { canonical: '/wijnkaart' },
 };
 
@@ -130,7 +130,7 @@ const bubbels: Wine[] = [
       </>
     ),
     desc:
-      'Een droge, mousserende wijn met tonen van rode bessen, munt en hibiscus bloem.',
+      'Een droge, mousserende wijn met tonen van rode bessen, munt en hibiscusbloem.',
     stack: [{ amount: '€ 69', ml: '750ML' }],
   },
   {
@@ -291,7 +291,7 @@ const witteWijnen: Wine[] = [
       </>
     ),
     desc:
-      'Baron de L. wordt beschouwd als een van de beste wijnen van de Sauvignon Blanc-druif ter wereld. Beste Pouilly fume die er is.',
+      'Baron de L. wordt beschouwd als een van de beste wijnen van de Sauvignon Blanc-druif ter wereld. De beste Pouilly-Fumé die er is.',
     stack: [
       { amount: '€ 155', ml: '750ML' },
       { amount: '€ 280', ml: '1,5L' },
@@ -393,7 +393,7 @@ const witteWijnen: Wine[] = [
       </>
     ),
     desc:
-      "Een goudgele Chenin met ananas en abrikoosaroma's, mooi geintegreerd hout, en een lange afdronk.",
+      "Een goudgele Chenin met ananas en abrikoosaroma's, mooi geïntegreerd hout en een lange afdronk.",
     price: { bottle: '€ 67,5' },
   },
   {
@@ -450,7 +450,7 @@ const witteWijnen: Wine[] = [
       </>
     ),
     desc:
-      'Stuivend geur, fris en droog met mango, limoen, passievrucht en een rijke smaak.',
+      'Stuivende geur, fris en droog met mango, limoen, passievrucht en een rijke smaak.',
     price: { bottle: '€ 52,5' },
   },
   {
@@ -532,7 +532,7 @@ const rodeWijnen: Wine[] = [
         <strong>Beaune-Gr&egrave;ves, Bourgogne,</strong> Thomas Morey, Frankrijk <em>2021</em>
       </>
     ),
-    desc: 'Elegant rood fruit, fluweelzacht en subtiel hout, pure Bourgogne klasse.',
+    desc: 'Elegant rood fruit, fluweelzacht en subtiel hout, pure Bourgogne-klasse.',
     price: { bottle: '€ 105' },
   },
   {
@@ -542,7 +542,7 @@ const rodeWijnen: Wine[] = [
       </>
     ),
     desc:
-      "Een van de bekendste Amarone's gemaakt van ingedroogde druiven en dat geeft een smaak!",
+      'Een van de bekendste Amarones, gemaakt van ingedroogde druiven. Dat proeft u.',
     stack: [
       { amount: '€ 76,5', ml: '375ML' },
       { amount: '€ 100', ml: '750ML' },
@@ -556,7 +556,7 @@ const rodeWijnen: Wine[] = [
       </>
     ),
     desc:
-      'Prachtige Troisieme Grand Cru Classe du Medoc. Bijna paarszwarte kleur, kruidige neus met zwart fruit en bessen.',
+      'Prachtige Troisième Grand Cru Classé du Médoc. Bijna paarszwarte kleur, kruidige neus met zwart fruit en bessen.',
     price: { bottle: '€ 96,5' },
   },
   {
@@ -576,7 +576,7 @@ const rodeWijnen: Wine[] = [
       </>
     ),
     desc:
-      "Aroma's van zwarte kers, cassis, geroosterd brood en ceder, met een volle smaak van rijpe vruchten en een subtiele vanille en houttoets.",
+      "Aroma's van zwarte kers, cassis, geroosterd brood en ceder, met een volle smaak van rijpe vruchten en een subtiele vanille- en houttoets.",
     price: { bottle: '€ 71' },
   },
   {
@@ -606,7 +606,7 @@ const rodeWijnen: Wine[] = [
       </>
     ),
     desc:
-      "Diep paarse wijn met aroma's van donker fruit, wilde kersen, koffie en cacao, met een rijke, volle smaak.",
+      "Dieppaarse wijn met aroma's van donker fruit, wilde kersen, koffie en cacao, met een rijke, volle smaak.",
     price: { bottle: '€ 59,5' },
   },
   {
@@ -626,7 +626,7 @@ const rodeWijnen: Wine[] = [
       </>
     ),
     desc:
-      '"I ate his liver with some fava beans and a nice Chianti..." — Hannibal Lecter',
+      '"I ate his liver with some fava beans and a nice Chianti..." (Hannibal Lecter)',
     price: { bottle: '€ 56,5' },
   },
   {
@@ -649,7 +649,7 @@ const roseWijnen: Wine[] = [
       </>
     ),
     desc:
-      'Een elegante en verfijnde rose uit de Provence, bekend om zijn frisse karakter en zachte fruittonen van aardbei, perzik en citrus.',
+      'Een elegante en verfijnde rosé uit de Provence, bekend om zijn frisse karakter en zachte fruittonen van aardbei, perzik en citrus.',
     price: { bottle: '€ 68' },
   },
   {
@@ -659,7 +659,7 @@ const roseWijnen: Wine[] = [
       </>
     ),
     desc:
-      "Een verfijnde rose uit de Loire, gemaakt van Pinot Noir, met aroma's van framboos en kers.",
+      "Een verfijnde rosé uit de Loire, gemaakt van Pinot Noir, met aroma's van framboos en kers.",
     price: { bottle: '€ 79' },
   },
   {
@@ -669,7 +669,7 @@ const roseWijnen: Wine[] = [
       </>
     ),
     desc:
-      'Een verfijnde en elegante Provence rose met tonen van witte perzik, citrus en bloemen.',
+      'Een verfijnde en elegante rosé uit de Provence met tonen van witte perzik, citrus en bloemen.',
     price: { bottle: '€ 98' },
   },
 ];
@@ -694,18 +694,18 @@ export default function WijnkaartPage() {
             <p className="wine-hero__quote">
               &ldquo;Rice is born in water and must die in wine&hellip;&rdquo;
             </p>
-            <span className="wine-hero__attr">&mdash; Asian Glories</span>
+            <span className="wine-hero__attr">Asian Glories</span>
           </div>
         </div>
       </header>
 
-      <nav className="section-nav" aria-label="Wijnkaart secties">
+      <nav className="section-nav" aria-label="Onderdelen van de wijnkaart">
         <div className="section-nav__inner">
           <a href="#bubbels">Bubbels</a>
           <a href="#huiswijnen">Huiswijnen</a>
-          <a href="#wit">Witte Wijnen</a>
-          <a href="#rood">Rode Wijnen</a>
-          <a href="#rose">Ros&eacute; Wijnen</a>
+          <a href="#wit">Witte wijnen</a>
+          <a href="#rood">Rode wijnen</a>
+          <a href="#rose">Ros&eacute;wijnen</a>
         </div>
       </nav>
 
@@ -727,7 +727,7 @@ export default function WijnkaartPage() {
           <p className="wine-quote__text">
             Too much of anything is bad, but too much Champagne is just right.
           </p>
-          <span className="wine-quote__attr">&mdash; F. Scott Fitzgerald</span>
+          <span className="wine-quote__attr">F. Scott Fitzgerald</span>
         </div>
 
         {/* HUISWIJNEN */}
@@ -739,7 +739,7 @@ export default function WijnkaartPage() {
         </div>
 
         <div className="wine-sub-header rv">
-          <h3>Wit Huiswijnen</h3>
+          <h3>Witte huiswijnen</h3>
         </div>
         <ColHead />
         <div className="wine-list rv">
@@ -749,7 +749,7 @@ export default function WijnkaartPage() {
         </div>
 
         <div className="wine-sub-header rv">
-          <h3>Rode Huiswijnen</h3>
+          <h3>Rode huiswijnen</h3>
         </div>
         <ColHead />
         <div className="wine-list rv">
@@ -759,7 +759,7 @@ export default function WijnkaartPage() {
         </div>
 
         <div className="wine-sub-header rv">
-          <h3>Ros&eacute; Huiswijn</h3>
+          <h3>Ros&eacute; huiswijn</h3>
         </div>
         <ColHead />
         <div className="wine-list rv">
@@ -771,7 +771,7 @@ export default function WijnkaartPage() {
         {/* WITTE WIJNEN */}
         <div className="wine-cat-header rv" id="wit">
           <div className="wine-cat-header__line" />
-          <h2>Witte Wijnen</h2>
+          <h2>Witte wijnen</h2>
           <span className="wine-cat-header__cn">白葡萄酒</span>
           <div className="wine-cat-header__line" />
         </div>
@@ -787,13 +787,13 @@ export default function WijnkaartPage() {
             Age is just a number. It&apos;s totally irrelevant unless, of course, you happen to be a
             bottle of wine.
           </p>
-          <span className="wine-quote__attr">&mdash; Joan Collins</span>
+          <span className="wine-quote__attr">Joan Collins</span>
         </div>
 
         {/* RODE WIJNEN */}
         <div className="wine-cat-header rv" id="rood">
           <div className="wine-cat-header__line" />
-          <h2>Rode Wijnen</h2>
+          <h2>Rode wijnen</h2>
           <span className="wine-cat-header__cn">红葡萄酒</span>
           <div className="wine-cat-header__line" />
         </div>
@@ -807,7 +807,7 @@ export default function WijnkaartPage() {
         {/* ROSE WIJNEN */}
         <div className="wine-cat-header rv" id="rose">
           <div className="wine-cat-header__line" />
-          <h2>Ros&eacute; Wijnen</h2>
+          <h2>Ros&eacute;wijnen</h2>
           <span className="wine-cat-header__cn">桃红葡萄酒</span>
           <div className="wine-cat-header__line" />
         </div>
@@ -818,12 +818,12 @@ export default function WijnkaartPage() {
           ))}
         </div>
 
-        <p className="wine-footnote rv">* De jaartallen van de wijnen zijn onder voorbehoud</p>
+        <p className="wine-footnote rv">* De jaartallen van de wijnen zijn onder voorbehoud.</p>
 
         <div className="info-note rv">
           <p className="info-note__text">
             <strong>Wijnadvies?</strong> Onze gastvrouw helpt u graag bij het kiezen van de perfecte
-            wijn bij uw gerecht. Vraag gerust naar de wijn-spijs combinaties.
+            wijn bij uw gerecht. Vraag gerust naar de wijn-spijscombinaties.
           </p>
         </div>
       </main>

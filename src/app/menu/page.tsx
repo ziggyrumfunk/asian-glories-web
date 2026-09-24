@@ -9,7 +9,7 @@ import './menu.css';
 export const metadata: Metadata = {
   title: 'Menu | Asian Glories Rotterdam | Kantonees & Sichuan Restaurant',
   description:
-    "Bekijk de menukaart van Asian Glories Rotterdam. Soepen, voorgerechten, hoofdgerechten en proeverijmenu's. Elke dinsdagavond tapas. Authentieke Kantonese en Sichuan keuken.",
+    "Bekijk de menukaart van Asian Glories Rotterdam. Soepen, voorgerechten, hoofdgerechten en proeverijmenu's. Elke dinsdagavond tapas. Authentieke Kantonese en Sichuanese keuken.",
   alternates: { canonical: '/menu' },
 };
 
@@ -17,7 +17,7 @@ const menuSchema = {
   '@context': 'https://schema.org',
   '@type': 'Menu',
   name: 'Asian Glories Menukaart',
-  description: 'Authentieke Kantonese en Sichuan gerechten in Rotterdam',
+  description: 'Authentieke Kantonese en Sichuanese gerechten in Rotterdam',
   url: 'https://www.asianglories.nl/menu',
   hasMenuSection: [
     { '@type': 'MenuSection', name: 'Asian Tasting Menu' },
@@ -91,8 +91,8 @@ function DishList({ dishes }: { dishes: Dish[] }) {
 
 const firstImpressions: Dish[] = [
   { name: 'Tonijn | citrus-soja | wasabi', price: '€ 16,5' },
-  { name: 'Rode-biet | citrus-soja | wasabi', price: '€ 14,5' },
-  { name: 'Sesam kip | zwarte sesam | kippenhuid', price: '€ 10,5' },
+  { name: 'Rode biet | citrus-soja | wasabi', price: '€ 14,5' },
+  { name: 'Sesamkip | zwarte sesam | kippenhuid', price: '€ 10,5' },
   { name: 'Rauwe oester', price: '€ 8,5' },
 ];
 
@@ -105,11 +105,11 @@ const dimsumBundles: Dish[] = [
 
 const warmDishes: Dish[] = [
   { name: 'Sui kau-soep', price: '€ 11' },
-  { name: 'Kippen of eenden soep', price: '€ 10,50' },
+  { name: 'Kippen- of eendensoep', price: '€ 10,50' },
   { name: 'Coquille met glasnoedels', price: '€ 15' },
   { name: 'Oester met zwarte bonen', price: '€ 9,5' },
-  { name: 'Peking eend', note: '2 stuks', price: '€ 13,5' },
-  { name: 'Eend wrap', note: 'Supplement: lever +€5,5', price: '€ 8,5' },
+  { name: 'Pekingeend', note: '2 stuks', price: '€ 13,5' },
+  { name: 'Eendwrap', note: 'Supplement: lever +€5,5', price: '€ 8,5' },
   { name: 'Mcjenny met buikspek', price: '€ 9,5' },
   { name: 'Lamskotelet met zwarte peper', price: '€ 11,5' },
 ];
@@ -168,7 +168,7 @@ const ALaCarte = (
     <DishList dishes={warmDishes} />
 
     <p className="tasting-note rv" style={{ marginTop: 'clamp(40px,5vw,60px)' }}>
-      Vraag naar eventuele gerechtjes buiten kaart om.
+      Vraag gerust naar gerechten buiten de kaart om.
     </p>
 
     {/* Main Courses */}
@@ -186,7 +186,7 @@ const ALaCarte = (
 
     <div className="allergy-note rv">
       <p className="allergy-note__text">
-        <strong>Heeft u een allergie?</strong> Meld het ons!
+        <strong>Heeft u een allergie?</strong> Laat het ons weten.
       </p>
     </div>
   </>
@@ -197,8 +197,8 @@ const ALaCarte = (
 const TuesdayTapas = (
   <>
     <p className="tasting-note rv" style={{ marginBottom: 'clamp(40px,5vw,60px)' }}>
-      Elke dinsdagavond serveren wij ons tapas-menu: een selectie kleine gerechten om te delen,
-      of kies een van onze Asian Tasting menu&apos;s.
+      Elke dinsdagavond serveren wij ons tapasmenu: een selectie kleine gerechten om te delen.
+      U kunt ook kiezen voor een van onze Asian Tasting-menu&apos;s.
     </p>
 
     <div className="cat-header rv">
@@ -230,12 +230,12 @@ const TuesdayTapas = (
     <DishList dishes={warmDishes} />
 
     <p className="tasting-note rv" style={{ marginTop: 'clamp(40px,5vw,60px)' }}>
-      Vraag naar eventuele gerechtjes buiten kaart om.
+      Vraag gerust naar gerechten buiten de kaart om.
     </p>
 
     <div className="allergy-note rv">
       <p className="allergy-note__text">
-        <strong>Heeft u een allergie?</strong> Meld het ons!
+        <strong>Heeft u een allergie?</strong> Laat het ons weten.
       </p>
     </div>
   </>
@@ -263,8 +263,8 @@ export default function MenuPage() {
           </div>
           <div className="menu-hero__meta rv d2">
             <p className="menu-hero__note">
-              Seizoensgebonden gerechten bereid met verse ingredi&euml;nten. Het dessert is niet
-              inbegrepen tenzij anders vermeld.
+              Seizoensgebonden gerechten, bereid met verse ingredi&euml;nten. Het dessert is niet
+              inbegrepen, tenzij anders vermeld.
             </p>
             <a
               href="/images/menu-food.pdf"
@@ -285,7 +285,7 @@ export default function MenuPage() {
                 borderRadius: 1,
               }}
             >
-              Download PDF menu
+              Download de menukaart (pdf)
             </a>
           </div>
         </div>
@@ -293,13 +293,13 @@ export default function MenuPage() {
 
       <section className="menu-intro">
         <div className="menu-intro__inner">
-          <span className="menu-intro__label rv">Over Ons</span>
+          <span className="menu-intro__label rv">Over ons</span>
           <p className="menu-intro__text rv d1">
             Asian Glories is een geliefd familierestaurant met Chinese en Rotterdamse wortels. Door
-            de jaren heen zijn wij uitgegroeid tot een verfijnde culinaire bestemming. Al drie
-            decennia verrast ons toegewijde team onze gasten met de beste seizoensingredi&euml;nten.
-            Met een focus op voortdurende verbetering en gastvrijheid streven wij ernaar u een
-            onvergetelijke culinaire ervaring te bieden bij Restaurant Asian Glories.
+            de jaren heen zijn wij uitgegroeid tot een verfijnd adres voor de Chinese keuken. Al
+            bijna dertig jaar verrast ons toegewijde team gasten met de beste
+            seizoensingredi&euml;nten. Gastvrijheid en de wil om steeds beter te worden staan
+            daarbij voorop.
           </p>
         </div>
       </section>
@@ -340,7 +340,7 @@ export default function MenuPage() {
               rel="noopener"
               className="btn-outline"
             >
-              Download menukaart PDF
+              Download de menukaart (pdf)
             </a>
           </div>
         </div>

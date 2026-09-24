@@ -6,12 +6,12 @@ import BookMockupTilt from './BookMockupTilt';
 import './boek.css';
 
 export const metadata: Metadata = {
-  title: 'Rotterdam Chinatown — Het Boek | Asian Glories',
+  title: 'Rotterdam Chinatown, het boek | Asian Glories',
   description:
     'Rotterdam Chinatown: het culinair erfgoed van Katendrecht en Asian Glories. Geschreven door Ellen Scholtens. Een eerbetoon aan Jenny en Popo. Bestel nu voor €39,95.',
   alternates: { canonical: '/boek' },
   openGraph: {
-    title: 'Rotterdam Chinatown — Het Boek | Asian Glories',
+    title: 'Rotterdam Chinatown, het boek | Asian Glories',
     description:
       'Een eerbetoon aan Jenny en Popo. Het verhaal van het eerste Chinatown van Europa en de oprichters van Asian Glories.',
     type: 'website',
@@ -77,7 +77,7 @@ export default function BoekPage() {
             <div>
               <div className="boek-hero__kicker rv">
                 <div className="boek-hero__kicker-line" />
-                <span>Asian Glories &mdash; Het boek</span>
+                <span>Asian Glories &middot; Het boek</span>
               </div>
               <h1 className="boek-hero__title rv d1">
                 Rotterdam
@@ -89,7 +89,7 @@ export default function BoekPage() {
               </p>
               <p className="boek-hero__desc rv d3">
                 Het verhaal van het eerste Chinatown van Europa, de opkomst van de Chinese keuken in
-                Nederland, en de nalatenschap van Jenny en Popo. Geschreven door culinair journalist
+                Nederland en de nalatenschap van Jenny en Popo. Geschreven door culinair journalist
                 Ellen Scholtens, samen met chef Kevin Fan.
               </p>
               <div className="boek-hero__actions rv d4">
@@ -167,13 +167,13 @@ export default function BoekPage() {
                 heet, opende ook het eerste Chinese restaurant van Nederland: Chong Kok Low.
               </p>
               <p className="body-txt rv d3">
-                Dit boek duikt in die fascinerende geschiedenis, de komst van Chinese havenarbeiders
-                in 1911, de opbouw van een gemeenschap, de culinaire tradities die ze meebrachten.
+                Dit boek duikt in die fascinerende geschiedenis: de komst van Chinese havenarbeiders
+                in 1911, de opbouw van een gemeenschap en de culinaire tradities die zij meebrachten.
                 En hoe dat alles uiteindelijk leidde tot Asian Glories.
               </p>
               <p className="body-txt rv d4">
                 Ook de Chinees-Indisch-Nederlandse keuken wordt belicht, samen met de concepten van
-                de nieuwe generatie en de eeuwenoude Chinese keuken met zijn vele tradities en
+                de nieuwe generatie en de eeuwenoude Chinese keuken met haar vele tradities en
                 rituelen.
               </p>
             </div>
@@ -250,8 +250,8 @@ export default function BoekPage() {
               <span className="chapter-card__num">01</span>
               <h3>De eerste Chinezen op de Kaap</h3>
               <p>
-                Hoe Katendrecht uitgroeide tot het eerste Chinatown op het Europese vasteland en de
-                opening van het eerste Chinese restaurant van Nederland.
+                Hoe Katendrecht uitgroeide tot het eerste Chinatown op het Europese vasteland, en hoe
+                daar het eerste Chinese restaurant van Nederland de deuren opende.
               </p>
             </div>
             <div className="chapter-card">
@@ -259,7 +259,7 @@ export default function BoekPage() {
               <h3>Vanuit Penang en Hongkong</h3>
               <p>
                 Het levensverhaal van Jenny Loh en Popo, hun reis naar Nederland, hun jaren in de
-                horeca, en de opening van Asian Glories in 1997.
+                horeca en de opening van Asian Glories in 1997.
               </p>
             </div>
             <div className="chapter-card">
@@ -267,7 +267,7 @@ export default function BoekPage() {
               <h3>Bij Jenny eten</h3>
               <p>
                 Topkoks en vaste gasten brengen een ode aan Asian Glories. Herinneringen aan Jenny,
-                Popo en de gerechten die generaties bleven hangen.
+                Popo en de gerechten die generaties lang zijn bijgebleven.
               </p>
             </div>
             <div className="chapter-card">
@@ -275,7 +275,7 @@ export default function BoekPage() {
               <h3>Eeuwenoude culinaire tradities</h3>
               <p>
                 Een diepgaand inkijkje in de Chinese keuken, van Kantonees tot Sichuan, van dim sum
-                tot Peking eend. De rituelen en technieken van eeuwen.
+                tot Pekingeend. Rituelen en technieken die eeuwen teruggaan.
               </p>
             </div>
             <div className="chapter-card">

@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.asianglories.nl'),
   title: 'Asian Glories Rotterdam | Verfijnd Chinees Restaurant | Kantonees & Sichuan',
   description:
-    'Asian Glories is een verfijnd Chinees restaurant in Rotterdam, gespecialiseerd in authentieke Kantonese en Sichuan gerechten. Bekroond met de Michelin Bib Gourmand en Gault&Millau. Lunch & diner, Westewagenstraat 74.',
+    'Asian Glories is een verfijnd Chinees restaurant in Rotterdam, gespecialiseerd in authentieke Kantonese en Sichuanese gerechten. Bekroond met een Michelin Bib Gourmand en erkend door Gault&Millau. Lunch & diner, Westewagenstraat 74.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Asian Glories Rotterdam | Verfijnd Chinees Restaurant',
     description:
-      'Authentieke Kantonese en Sichuan gerechten in Rotterdam. Bekroond met Michelin Bib Gourmand en Gault&Millau.',
+      'Authentieke Kantonese en Sichuanese gerechten in Rotterdam. Bekroond met een Michelin Bib Gourmand en erkend door Gault&Millau.',
     type: 'website',
     locale: 'nl_NL',
     images: ['/images/interior.jpg'],
@@ -50,7 +50,7 @@ const restaurantSchema = {
   '@type': 'Restaurant',
   name: 'Asian Glories',
   description:
-    'Verfijnd Chinees restaurant in Rotterdam met authentieke Kantonese en Sichuan gerechten. Bekroond met de Michelin Bib Gourmand en Gault&Millau.',
+    'Verfijnd Chinees restaurant in Rotterdam met authentieke Kantonese en Sichuanese gerechten. Bekroond met een Michelin Bib Gourmand en erkend door Gault&Millau.',
   url: 'https://www.asianglories.nl',
   telephone: '+31102542071',
   email: 'info@asianglories.nl',
