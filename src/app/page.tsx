@@ -1,6 +1,7 @@
 'use client';
 
 import Nav from '@/components/Nav';
+import OpeningHoursRows from '@/components/OpeningHoursRows';
 import Footer from '@/components/Footer';
 import AwardsStrip from '@/components/AwardsStrip';
 import PressWall from '@/components/PressWall';
@@ -424,34 +425,7 @@ export default function HomePage() {
           <div className="info__in" id="contact">
             <div>
               <p className="lbl">{t('home.info.hours')}</p>
-              <div className="hr">
-                <span>{t('day.mon')}</span>
-                <span>17:00 &ndash; 21:30 *</span>
-              </div>
-              <div className="hr">
-                <span>{t('day.tue')}</span>
-                <span>17:00 &ndash; 21:30</span>
-              </div>
-              <div className="hr">
-                <span>{t('day.wed')}</span>
-                <span>{t('day.closed')}</span>
-              </div>
-              <div className="hr">
-                <span>{t('day.thu')}</span>
-                <span>17:00 &ndash; 21:30</span>
-              </div>
-              <div className="hr">
-                <span>{t('day.fri')}</span>
-                <span>12:00 &ndash; 22:00 *</span>
-              </div>
-              <div className="hr">
-                <span>{t('day.sat')}</span>
-                <span>12:00 &ndash; 22:00</span>
-              </div>
-              <div className="hr">
-                <span>{t('day.sun')}</span>
-                <span>12:00 &ndash; 21:00 *</span>
-              </div>
+              <OpeningHoursRows />
               <p
                 className="rv"
                 style={{

@@ -245,3 +245,24 @@ a {
     animation: none;
   }
 }
+.closure-hours {
+  max-width: 300px;
+  margin: 0 auto 30px;
+}
+.closure-hours p {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.78);
+}
+.closure-hours p:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.closure-hours span:last-child {
+  color: #fced88;
+  white-space: nowrap;
+}

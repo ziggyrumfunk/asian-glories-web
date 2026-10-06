@@ -274,17 +274,18 @@ const DICT: Dict = {
   // Press wall
   'press.eyebrow': { nl: 'In de pers', en: 'In the press' },
 
-  // Cooking course popup (until 7 October 2026)
-  'kookpop.eyebrow': { nl: 'Woensdag 7 oktober', en: 'Wednesday 7 October' },
-  'kookpop.title': { nl: 'Kookcursus Chinese keuken', en: 'Chinese cooking course' },
-  'kookpop.body': {
+  // Opening hours popup (7 October to 1 November 2026)
+  'notice.eyebrow': { nl: 'Vanaf maandag 19 oktober', en: 'From Monday 19 October' },
+  'notice.title': { nl: 'Zeven avonden per week open', en: 'Open seven nights a week' },
+  'notice.body': {
     nl:
-      'Hands-on koken met chef Kevin: dim sum vouwen, zelf wokken en afsluiten met een viergangenmenu van eigen hand. Het aantal plekken is beperkt.',
+      'Voortaan bent u ook op woensdag welkom. Begin van de week serveren wij een kaart met kleinere gerechten om te delen; in het weekend staan ook onze grote hoofdgerechten weer op tafel.',
     en:
-      'Hands-on cooking with chef Kevin: fold dim sum, work the wok and finish with a four-course menu you cooked yourself. Spots are limited.',
+      'From now on we are open on Wednesdays too. Early in the week we serve a menu of smaller plates for sharing; at the weekend our large main courses return to the table.',
   },
-  'kookpop.btn': { nl: 'Bekijk de kookcursus', en: 'View the cooking course' },
-  'kookpop.close': { nl: 'Sluiten', en: 'Close' },
+  'notice.hours.monthu': { nl: 'Maandag t/m donderdag', en: 'Monday to Thursday' },
+  'notice.btn': { nl: 'Reserveer een tafel', en: 'Reserve a table' },
+  'notice.close': { nl: 'Sluiten', en: 'Close' },
 
   // Kookcursus band on the home page
   'home.course.label': {

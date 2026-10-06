@@ -2,8 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant, DM_Sans } from 'next/font/google';
 import LoadingCurtain from '@/components/LoadingCurtain';
 import ZenchefWidget from '@/components/ZenchefWidget';
-import KookcursusNotice from '@/components/KookcursusNotice';
+import OpeningNotice from '@/components/OpeningNotice';
 import { I18nProvider } from '@/lib/i18n';
+import { getWeekHours } from '@/lib/hours';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   },
 };
 
-const restaurantSchema = {
+const baseRestaurantSchema = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
   name: 'Asian Glories',
@@ -66,14 +67,6 @@ const restaurantSchema = {
   award: ['Michelin Bib Gourmand', 'Gault&Millau'],
   acceptsReservations: 'True',
   menu: 'https://www.asianglories.nl/menu',
-  openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '17:00', closes: '21:30' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Tuesday', opens: '17:00', closes: '21:30' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday', opens: '17:00', closes: '21:30' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '12:00', closes: '22:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '12:00', closes: '22:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '12:00', closes: '21:00' },
-  ],
   // Credit the web agency so search engines can connect the work back to us.
   creator: {
     '@type': 'Organization',
@@ -82,11 +75,28 @@ const restaurantSchema = {
   },
 };
 
+// Regenerate prerendered pages hourly so date-based content (the opening hours
+// switch on 19 October, the popup schedule) goes live without a redeploy.
+export const revalidate = 3600;
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Built per render, not at module load, so the hours follow the current date.
+  const restaurantSchema = {
+    ...baseRestaurantSchema,
+    openingHoursSpecification: getWeekHours()
+      .filter((d) => d.opens)
+      .map((d) => ({
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: d.schemaDay,
+        opens: d.opens,
+        closes: d.closes,
+      })),
+  };
+
   return (
     <html
       lang="nl"
@@ -101,7 +111,7 @@ export default function RootLayout({
         <LoadingCurtain />
         <I18nProvider>
           {children}
-          <KookcursusNotice />
+          <OpeningNotice />
         </I18nProvider>
         <ZenchefWidget />
       </body>

@@ -1,6 +1,7 @@
 'use client';
 
 import Nav from '@/components/Nav';
+import OpeningHoursRows from '@/components/OpeningHoursRows';
 import Footer from '@/components/Footer';
 import RevealScript from '@/components/Reveal';
 import { useT } from '@/lib/i18n';
@@ -67,34 +68,7 @@ export default function ReserveerPage() {
               {/* Opening hours */}
               <div className="rsv-info__col rv d1">
                 <h3 className="rsv-info__h3">{t('home.info.hours')}</h3>
-                <div className="hr">
-                  <span>{t('day.mon')}</span>
-                  <span>17:00 &ndash; 21:30 *</span>
-                </div>
-                <div className="hr">
-                  <span>{t('day.tue')}</span>
-                  <span>17:00 &ndash; 21:30</span>
-                </div>
-                <div className="hr">
-                  <span>{t('day.wed')}</span>
-                  <span>{t('day.closed')}</span>
-                </div>
-                <div className="hr">
-                  <span>{t('day.thu')}</span>
-                  <span>17:00 &ndash; 21:30</span>
-                </div>
-                <div className="hr">
-                  <span>{t('day.fri')}</span>
-                  <span>12:00 &ndash; 22:00 *</span>
-                </div>
-                <div className="hr">
-                  <span>{t('day.sat')}</span>
-                  <span>12:00 &ndash; 22:00</span>
-                </div>
-                <div className="hr">
-                  <span>{t('day.sun')}</span>
-                  <span>12:00 &ndash; 21:00 *</span>
-                </div>
+                <OpeningHoursRows />
                 <p className="rsv-info__note">{t('home.info.hours.note')}</p>
               </div>
 
