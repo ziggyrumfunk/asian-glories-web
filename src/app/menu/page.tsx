@@ -9,7 +9,7 @@ import './menu.css';
 export const metadata: Metadata = {
   title: 'Menu | Asian Glories Rotterdam | Kantonees & Sichuan Restaurant',
   description:
-    "Bekijk de menukaart van Asian Glories Rotterdam. Soepen, voorgerechten, hoofdgerechten en proeverijmenu's. Elke dinsdagavond tapas. Authentieke Kantonese en Sichuanese keuken.",
+    "Bekijk de menukaart van Asian Glories Rotterdam: proeverijmenu's, handgemaakte dim sum en kleine gerechten om te delen, en van vrijdag t/m zondag onze signatuurgerechten. Authentieke Kantonese en Sichuanese keuken.",
   alternates: { canonical: '/menu' },
 };
 
@@ -24,8 +24,7 @@ const menuSchema = {
     { '@type': 'MenuSection', name: 'First Impressions' },
     { '@type': 'MenuSection', name: 'Dim Sum Collection' },
     { '@type': 'MenuSection', name: 'Warm Dishes' },
-    { '@type': 'MenuSection', name: 'Main Courses' },
-    { '@type': 'MenuSection', name: 'Dinsdag Tapas' },
+    { '@type': 'MenuSection', name: 'Signatuurgerechten om te delen' },
   ],
 };
 
@@ -37,31 +36,36 @@ const Tasting = (
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
         gap: 2,
-        marginBottom: 'clamp(40px,6vw,80px)',
+        marginBottom: 'clamp(30px,4vw,50px)',
       }}
     >
       <div className="tasting-card">
         <span className="tasting-card__cn">四道</span>
-        <span className="tasting-card__name">Asian Tasting, 4 Gangen</span>
+        <span className="tasting-card__name">Asian Tasting, 4 gangen</span>
         <div className="tasting-card__price">
           &euro;58 <span>p.p.</span>
         </div>
       </div>
       <div className="tasting-card">
         <span className="tasting-card__cn">六道</span>
-        <span className="tasting-card__name">Asian Tasting, 6 Gangen</span>
+        <span className="tasting-card__name">Asian Tasting, 6 gangen</span>
         <div className="tasting-card__price">
           &euro;68 <span>p.p.</span>
         </div>
       </div>
       <div className="tasting-card">
         <span className="tasting-card__cn">八道</span>
-        <span className="tasting-card__name">Asian Tasting, 8 Gangen</span>
+        <span className="tasting-card__name">Asian Tasting, 8 gangen</span>
         <div className="tasting-card__price">
           &euro;78 <span>p.p.</span>
         </div>
       </div>
     </div>
+    <p className="tasting-note rv">
+      Dim sum | Pekingeend | Zeevruchten en meer
+      <br />
+      Het dessert is niet inbegrepen.
+    </p>
   </>
 );
 
@@ -89,6 +93,25 @@ function DishList({ dishes }: { dishes: Dish[] }) {
   );
 }
 
+function CatHeader({ title }: { title: string }) {
+  return (
+    <div className="cat-header rv">
+      <div className="cat-header__line" />
+      <h2>{title}</h2>
+      <div className="cat-header__line" />
+    </div>
+  );
+}
+
+const AllergyNote = (
+  <div className="allergy-note rv">
+    <p className="allergy-note__text">
+      <strong>Heeft u een allergie?</strong> Laat het ons weten.
+    </p>
+  </div>
+);
+
+/* Small plates: served every day, Monday to Sunday. */
 const firstImpressions: Dish[] = [
   { name: 'Tonijn | citrus-soja | wasabi', price: '€ 16,5' },
   { name: 'Rode biet | citrus-soja | wasabi', price: '€ 14,5' },
@@ -96,148 +119,92 @@ const firstImpressions: Dish[] = [
   { name: 'Rauwe oester', price: '€ 8,5' },
 ];
 
-const dimsumBundles: Dish[] = [
+const dimsumCollection: Dish[] = [
   { name: 'Hard-zacht', price: '€ 15,5' },
+  { name: 'Rijstflensjes met eend', price: '€ 14,5' },
   { name: '2 gebakken & 2 gestoomd', note: 'Alleen garnaal +€2,5', price: '€ 14' },
   { name: '3 gebakken & 3 gestoomd', note: 'Alleen garnaal +€3,5', price: '€ 19,5' },
   { name: '4 gebakken & 4 gestoomd', note: 'Alleen garnaal +€4,5', price: '€ 24' },
 ];
 
 const warmDishes: Dish[] = [
-  { name: 'Sui kau-soep', price: '€ 11' },
-  { name: 'Kippen- of eendensoep', price: '€ 10,50' },
   { name: 'Coquille met glasnoedels', price: '€ 15' },
+  { name: 'Tijgergarnaal met zwarte bonen', price: '€ 13,5' },
+  { name: 'Gestoomde vis', price: '€ 10,5' },
   { name: 'Oester met zwarte bonen', price: '€ 9,5' },
+  { name: '5-spice kwartel', price: '€ 15,5' },
   { name: 'Pekingeend', note: '2 stuks', price: '€ 13,5' },
-  { name: 'Eendwrap', note: 'Supplement: lever +€5,5', price: '€ 8,5' },
-  { name: 'Mcjenny met buikspek', price: '€ 9,5' },
   { name: 'Lamskotelet met zwarte peper', price: '€ 11,5' },
+  { name: 'Mcjenny met buikspek', price: '€ 9,5' },
 ];
 
-const mainCourses: Dish[] = [
-  { name: 'Tiger prawns | sichuan pepper | black beans', price: '€ 38,5' },
-  { name: 'King prawns | curry sauce', price: '€ 38,5' },
-  { name: 'Fish Catch of the Day (steamed or panfried)', price: '€ 37,5 / 39,95' },
+/* Signature dishes to share: Friday, Saturday and Sunday only. */
+const signatureDishes: Dish[] = [
   {
-    name: 'Canadian Lobster | spring onion | ginger',
-    note: 'Only pre-order',
-    price: '€ 12,50/100gr',
+    name: 'Gebakken tijgergarnalen | zwarte bonen | 5-spice | Sichuanpeper',
+    price: '€ 38,5',
   },
-  { name: 'Diamond steak | black pepper | macadamia', price: '€ 38,5' },
-  { name: 'Crispy filet steak stripes | mandarin sweet & sour', price: '€ 30' },
-  { name: 'Crispy Spanish Iberico pork | sweet & sour', price: '€ 31,5' },
-  { name: 'Chicken | barbecue sauce', price: '€ 31,5' },
-  { name: 'Char-Siew | crispy roasted pork belly', price: '€ 31' },
+  { name: 'Grote garnalen | curry | zoetzuur | pittig', price: '€ 38,5' },
+  { name: 'Vis van de dag', price: '€ 37,5 / 39,95' },
   {
-    name: 'Siu-Yuk | marinated and roasted pork in a sweet and savoury sauce',
-    price: '€ 31,50',
+    name: 'Canadese kreeft | bosui | gember',
+    note: 'Alleen vooraf te bestellen',
+    price: '€ 12,50 per 100 gr',
   },
+  { name: 'Diamanthaas | zwarte peper | macadamia | sesam', price: '€ 38,5' },
+  { name: 'Crunchy beef | sesam | zoetzuur | licht pittig', price: '€ 30' },
+  { name: 'Iberico | zoetzuur | ananas', price: '€ 31,5' },
+  { name: 'Kip sacha | Chinese barbecuesaus', price: '€ 32,5' },
+  { name: 'Char siu | gemarineerd en geroosterd varkensvlees', price: '€ 31' },
+  { name: 'Siu-Yuk | krokant geroosterd buikspek', price: '€ 31,5' },
   {
-    name: 'Tofu | black beans & sichuan chili | sweet & sour | salt & pepper | cumin & chili',
-    note: 'Choose your own sauce',
+    name: 'Tofu | zwarte bonen & Sichuanpeper | zoetzuur | zout & peper | komijn & chili',
+    note: 'Kies uw eigen saus',
     price: '€ 30',
   },
-  { name: 'Fresh greens | wok vegetables mix', price: '€ 25,5' },
-  { name: 'Fried rice or mie', price: '€ 5,5' },
+  { name: 'Chinese seizoensgroenten', price: '€ 25,5' },
+  { name: 'Gebakken rijst of noodles', price: '€ 5,5' },
 ];
 
-const ALaCarte = (
+const SmallPlates = (
   <>
-    {/* First Impressions */}
-    <div className="cat-header rv">
-      <div className="cat-header__line" />
-      <h2>First Impressions</h2>
-      <div className="cat-header__line" />
-    </div>
+    <p className="tasting-note rv" style={{ marginBottom: 'clamp(40px,5vw,60px)' }}>
+      Elke dag geserveerd: kleine gerechten om te delen, zodat u van alles een beetje kunt
+      proeven.
+    </p>
+
+    <CatHeader title="First Impressions" />
     <DishList dishes={firstImpressions} />
 
-    {/* Dim Sum Collection */}
-    <div className="cat-header rv">
-      <div className="cat-header__line" />
-      <h2>Dim Sum Collection</h2>
-      <div className="cat-header__line" />
-    </div>
-    <DishList dishes={dimsumBundles} />
+    <CatHeader title="Dim Sum Collection" />
+    <DishList dishes={dimsumCollection} />
 
-    {/* Warm Dishes */}
-    <div className="cat-header rv">
-      <div className="cat-header__line" />
-      <h2>Warm Dishes</h2>
-      <div className="cat-header__line" />
-    </div>
+    <CatHeader title="Warm Dishes" />
     <DishList dishes={warmDishes} />
 
     <p className="tasting-note rv" style={{ marginTop: 'clamp(40px,5vw,60px)' }}>
       Vraag gerust naar gerechten buiten de kaart om.
     </p>
 
-    {/* Main Courses */}
-    <div className="cat-header rv">
-      <div className="cat-header__line" />
-      <h2>Main Courses</h2>
-      <div className="cat-header__line" />
-    </div>
-    <DishList dishes={mainCourses} />
-
-    <div className="supplement-row rv">
-      <strong>Supplement:</strong> Salted Fish &euro;5pp | Prawns &euro;5pp | Beef &euro;4pp |
-      Duck &euro;3pp | Chicken &euro;3pp
-    </div>
-
-    <div className="allergy-note rv">
-      <p className="allergy-note__text">
-        <strong>Heeft u een allergie?</strong> Laat het ons weten.
-      </p>
-    </div>
+    {AllergyNote}
   </>
 );
 
-/* Tuesday tapas evening: the small dishes only, no main courses. Reuses the
-   same dish arrays as the a la carte tab so prices live in one place. */
-const TuesdayTapas = (
+const Signature = (
   <>
     <p className="tasting-note rv" style={{ marginBottom: 'clamp(40px,5vw,60px)' }}>
-      Elke dinsdagavond serveren wij ons tapasmenu: een selectie kleine gerechten om te delen.
-      U kunt ook kiezen voor een van onze Asian Tasting-menu&apos;s.
+      Alleen op vrijdag, zaterdag en zondag. Onze grote gerechten om te delen, bedoeld als het
+      middelpunt van uw tafel, naast de kleine gerechten.
     </p>
 
-    <div className="cat-header rv">
-      <div className="cat-header__line" />
-      <h2>Asian Tasting</h2>
-      <div className="cat-header__line" />
-    </div>
-    {Tasting}
-
-    <div className="cat-header rv">
-      <div className="cat-header__line" />
-      <h2>First Impressions</h2>
-      <div className="cat-header__line" />
-    </div>
-    <DishList dishes={firstImpressions} />
-
-    <div className="cat-header rv">
-      <div className="cat-header__line" />
-      <h2>Dim Sum Collection</h2>
-      <div className="cat-header__line" />
-    </div>
-    <DishList dishes={dimsumBundles} />
-
-    <div className="cat-header rv">
-      <div className="cat-header__line" />
-      <h2>Warm Dishes</h2>
-      <div className="cat-header__line" />
-    </div>
-    <DishList dishes={warmDishes} />
+    <CatHeader title="Signatuurgerechten om te delen" />
+    <DishList dishes={signatureDishes} />
 
     <p className="tasting-note rv" style={{ marginTop: 'clamp(40px,5vw,60px)' }}>
-      Vraag gerust naar gerechten buiten de kaart om.
+      Gerechten worden geserveerd zodra ze klaar zijn, zodat u ze op hun best kunt proeven.
     </p>
 
-    <div className="allergy-note rv">
-      <p className="allergy-note__text">
-        <strong>Heeft u een allergie?</strong> Laat het ons weten.
-      </p>
-    </div>
+    {AllergyNote}
   </>
 );
 
@@ -304,7 +271,7 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <MenuTabs tasting={Tasting} alacarte={ALaCarte} tapas={TuesdayTapas} />
+      <MenuTabs tasting={Tasting} plates={SmallPlates} signature={Signature} />
 
       <section className="menu-cta-bottom">
         <div className="menu-cta-bottom__inner">

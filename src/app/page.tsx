@@ -438,6 +438,9 @@ export default function HomePage() {
               >
                 {t('home.info.hours.note')}
               </p>
+              <p className="body-txt" style={{ marginTop: 18, fontSize: 16 }}>
+                {t('home.info.menunote')}
+              </p>
             </div>
             <div>
               <p className="lbl">{t('home.info.contact')}</p>

@@ -2,16 +2,16 @@
 
 import { useState } from 'react';
 
-type Tab = 'tasting' | 'alacarte' | 'tapas';
+type Tab = 'tasting' | 'plates' | 'signature';
 
 export default function MenuTabs({
   tasting,
-  alacarte,
-  tapas,
+  plates,
+  signature,
 }: {
   tasting: React.ReactNode;
-  alacarte: React.ReactNode;
-  tapas: React.ReactNode;
+  plates: React.ReactNode;
+  signature: React.ReactNode;
 }) {
   const [active, setActive] = useState<Tab>('tasting');
 
@@ -25,27 +25,25 @@ export default function MenuTabs({
           >
             <div className="tab-btn__inner">
               <span className="tab-btn__label">Proeverijmenu&apos;s</span>
-              <span className="tab-btn__hint">
-                Chef Menu | Tasting | Dim Sum | Vegetarisch
-              </span>
+              <span className="tab-btn__hint">Elke dag | 4, 6 of 8 gangen</span>
             </div>
           </button>
           <button
-            className={`tab-btn ${active === 'alacarte' ? 'active' : ''}`}
-            onClick={() => setActive('alacarte')}
+            className={`tab-btn ${active === 'plates' ? 'active' : ''}`}
+            onClick={() => setActive('plates')}
           >
             <div className="tab-btn__inner">
-              <span className="tab-btn__label">&Agrave; la carte</span>
-              <span className="tab-btn__hint">Soepen | Voorgerechten | Hoofdgerechten</span>
+              <span className="tab-btn__label">Kleine gerechten</span>
+              <span className="tab-btn__hint">Elke dag | Om te delen</span>
             </div>
           </button>
           <button
-            className={`tab-btn ${active === 'tapas' ? 'active' : ''}`}
-            onClick={() => setActive('tapas')}
+            className={`tab-btn ${active === 'signature' ? 'active' : ''}`}
+            onClick={() => setActive('signature')}
           >
             <div className="tab-btn__inner">
-              <span className="tab-btn__label">Dinsdag Tapas</span>
-              <span className="tab-btn__hint">Elke dinsdagavond | Tapas &amp; tasting menu&apos;s</span>
+              <span className="tab-btn__label">Signatuurgerechten</span>
+              <span className="tab-btn__hint">Vrijdag t/m zondag | Om te delen</span>
             </div>
           </button>
         </div>
@@ -53,10 +51,10 @@ export default function MenuTabs({
 
       <main className="menu-body">
         <section className={`menu-section ${active === 'tasting' ? 'visible' : ''}`}>{tasting}</section>
-        <section className={`menu-section ${active === 'alacarte' ? 'visible' : ''}`}>
-          {alacarte}
+        <section className={`menu-section ${active === 'plates' ? 'visible' : ''}`}>{plates}</section>
+        <section className={`menu-section ${active === 'signature' ? 'visible' : ''}`}>
+          {signature}
         </section>
-        <section className={`menu-section ${active === 'tapas' ? 'visible' : ''}`}>{tapas}</section>
       </main>
     </>
   );

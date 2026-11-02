@@ -118,10 +118,10 @@ const DICT: Dict = {
     nl: 'Krokant geroosterd buikspek',
     en: 'Crispy roasted pork belly',
   },
-  'home.dishes.crispybeef.name': { nl: 'Crispy beef', en: 'Crispy beef' },
+  'home.dishes.crispybeef.name': { nl: 'Crunchy beef', en: 'Crunchy beef' },
   'home.dishes.crispybeef.desc': {
-    nl: 'Sesam, mandarijn, zoetzuur',
-    en: 'Sesame, mandarin, sweet & sour',
+    nl: 'Sesam, zoetzuur, licht pittig',
+    en: 'Sesame, sweet & sour, mildly spicy',
   },
   'home.dishes.suikau.name': { nl: 'Sui kau-soep', en: 'Sui kau soup' },
   'home.dishes.suikau.desc': {
@@ -218,6 +218,12 @@ const DICT: Dict = {
     nl: '* Laatste reservering',
     en: '* Last seating',
   },
+  'home.info.menunote': {
+    nl:
+      'Maandag t/m donderdag serveren wij kleine gerechten om te delen. Van vrijdag t/m zondag staat de volledige kaart op tafel, met ook onze signatuurgerechten.',
+    en:
+      'Monday to Thursday we serve smaller plates for sharing. Friday to Sunday the full menu is available, including our signature dishes.',
+  },
 
   // Footer credit
   'footer.creditby': { nl: 'Website door', en: 'Website by' },
@@ -273,19 +279,6 @@ const DICT: Dict = {
 
   // Press wall
   'press.eyebrow': { nl: 'In de pers', en: 'In the press' },
-
-  // Opening hours popup (7 October to 1 November 2026)
-  'notice.eyebrow': { nl: 'Vanaf maandag 19 oktober', en: 'From Monday 19 October' },
-  'notice.title': { nl: 'Zeven avonden per week open', en: 'Open seven nights a week' },
-  'notice.body': {
-    nl:
-      'Voortaan bent u ook op woensdag welkom. Begin van de week serveren wij een kaart met kleinere gerechten om te delen; in het weekend staan ook onze grote hoofdgerechten weer op tafel.',
-    en:
-      'From now on we are open on Wednesdays too. Early in the week we serve a menu of smaller plates for sharing; at the weekend our large main courses return to the table.',
-  },
-  'notice.hours.monthu': { nl: 'Maandag t/m donderdag', en: 'Monday to Thursday' },
-  'notice.btn': { nl: 'Reserveer een tafel', en: 'Reserve a table' },
-  'notice.close': { nl: 'Sluiten', en: 'Close' },
 
   // Kookcursus band on the home page
   'home.course.label': {

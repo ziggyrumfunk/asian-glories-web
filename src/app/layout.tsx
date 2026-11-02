@@ -2,9 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant, DM_Sans } from 'next/font/google';
 import LoadingCurtain from '@/components/LoadingCurtain';
 import ZenchefWidget from '@/components/ZenchefWidget';
-import OpeningNotice from '@/components/OpeningNotice';
 import { I18nProvider } from '@/lib/i18n';
-import { getWeekHours } from '@/lib/hours';
+import { WEEK_HOURS } from '@/lib/hours';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -84,10 +83,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Built per render, not at module load, so the hours follow the current date.
   const restaurantSchema = {
     ...baseRestaurantSchema,
-    openingHoursSpecification: getWeekHours()
+    openingHoursSpecification: WEEK_HOURS
       .filter((d) => d.opens)
       .map((d) => ({
         '@type': 'OpeningHoursSpecification',
@@ -111,7 +109,6 @@ export default function RootLayout({
         <LoadingCurtain />
         <I18nProvider>
           {children}
-          <OpeningNotice />
         </I18nProvider>
         <ZenchefWidget />
       </body>

@@ -70,6 +70,9 @@ export default function ReserveerPage() {
                 <h3 className="rsv-info__h3">{t('home.info.hours')}</h3>
                 <OpeningHoursRows />
                 <p className="rsv-info__note">{t('home.info.hours.note')}</p>
+                <p className="rsv-info__body" style={{ marginTop: 16 }}>
+                  {t('home.info.menunote')}
+                </p>
               </div>
 
               {/* Kreeft + Phone */}
