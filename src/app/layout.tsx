@@ -4,7 +4,7 @@ import LoadingCurtain from '@/components/LoadingCurtain';
 import ZenchefWidget from '@/components/ZenchefWidget';
 import ChristmasNotice from '@/components/ChristmasNotice';
 import { I18nProvider } from '@/lib/i18n';
-import { WEEK_HOURS } from '@/lib/hours';
+import { activeClosures, WEEK_HOURS } from '@/lib/hours';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -94,6 +94,14 @@ export default function RootLayout({
         opens: d.opens,
         closes: d.closes,
       })),
+    // Google reads opens = closes = 00:00 as closed all day.
+    specialOpeningHoursSpecification: activeClosures().map((c) => ({
+      '@type': 'OpeningHoursSpecification',
+      opens: '00:00',
+      closes: '00:00',
+      validFrom: c.from,
+      validThrough: c.to,
+    })),
   };
 
   return (

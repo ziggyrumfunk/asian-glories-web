@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useT } from '@/lib/i18n';
 
 /**
- * Site-wide announcement of the Kerst tasting menu (24, 25 and 26 December
+ * Site-wide announcement of the Kerst tasting menu (25 and 26 December
  * 2026), linking to /kerst. Reuses the closure-* dialog styles in globals.css.
  *
  * - Shows at most once per 8 days per visitor (timestamp in localStorage,
@@ -14,7 +14,7 @@ import { useT } from '@/lib/i18n';
  * - Skipped on the /kerst page itself.
  * - Waits a beat so the LoadingCurtain can finish before the dialog fades in.
  */
-const STORAGE_KEY = 'ag-notice-kerst-2026';
+const STORAGE_KEY = 'ag-notice-kerst-2026-v2';
 const HIDE_AFTER = new Date('2026-12-27T00:00:00+01:00');
 const REPEAT_AFTER_MS = 8 * 24 * 60 * 60 * 1000;
 const SHOW_DELAY_MS = 2600;

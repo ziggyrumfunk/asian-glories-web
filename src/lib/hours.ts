@@ -24,6 +24,21 @@ export const WEEK_HOURS: DayHours[] = [
   { day: 'sun', schemaDay: 'Sunday', opens: '12:00', closes: '21:00', mark: true },
 ];
 
+/** One-off closures, shown under the hours and sent to Google until they have passed. */
+export const CLOSURES = [
+  {
+    from: '2026-12-23',
+    to: '2026-12-24',
+    until: new Date('2026-12-25T00:00:00+01:00'),
+    nl: 'Op 23 en 24 december zijn wij gesloten.',
+    en: 'We are closed on 23 and 24 December.',
+  },
+];
+
+export function activeClosures(now: Date = new Date()) {
+  return CLOSURES.filter((c) => now < c.until);
+}
+
 export function formatRange(d: DayHours): string {
   return `${d.opens} \u2013 ${d.closes}`;
 }

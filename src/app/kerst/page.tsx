@@ -19,11 +19,11 @@ const spectral = Spectral({
 export const metadata: Metadata = {
   title: 'Kerst Tasting Menu | Asian Glories Rotterdam',
   description:
-    'Op 24, 25 en 26 december serveert Asian Glories een kerstverhaal in acht gangen: van zalmsashimi en dim sum tot Pekingeend. 8 gangen €88 p.p., ook in zes of vier gangen.',
+    'Op eerste en tweede kerstdag, 25 en 26 december, serveert Asian Glories een kerstverhaal in acht gangen: van zalmsashimi en dim sum tot Pekingeend. 8 gangen €88 p.p., ook in zes of vier gangen.',
   alternates: { canonical: '/kerst' },
   openGraph: {
     title: 'Kerst Tasting Menu | Asian Glories Rotterdam',
-    description: 'Een kerstverhaal in acht gangen. 24, 25 en 26 december.',
+    description: 'Een kerstverhaal in acht gangen. 25 en 26 december.',
     images: ['/images/kerst-og.jpg'],
   },
 };
@@ -44,7 +44,7 @@ const eventSchema = {
   '@type': 'Event',
   name: 'Kerst Tasting Menu bij Asian Glories',
   description: 'Een kerstverhaal in acht gangen, ook in zes of vier gangen.',
-  startDate: '2026-12-24',
+  startDate: '2026-12-25',
   endDate: '2026-12-26',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   location: {
@@ -106,7 +106,7 @@ export default function KerstPage() {
       {/* HERO */}
       <header className="k-hero">
         <div className="k-hero__inner">
-          <p className="k-caps k-hero__date rv">24, 25 &amp; 26 december</p>
+          <p className="k-caps k-hero__date rv">25 &amp; 26 december</p>
           <h1 className="k-script k-hero__title rv d1">Kerst</h1>
           <p className="k-caps k-hero__sub rv d2">Tasting menu</p>
           <p className="k-ital k-hero__tag rv d2">Een kerstverhaal in acht gangen</p>
@@ -127,7 +127,7 @@ export default function KerstPage() {
           <div className="k-intro__inner">
             <p className="k-label rv">Kerst bij Asian Glories</p>
             <p className="k-intro__lead rv d1">
-              Op kerstavond, eerste en tweede kerstdag vertellen wij een verhaal in{' '}
+              Op eerste en tweede kerstdag vertellen wij een verhaal in{' '}
               <em>acht gangen</em>.
             </p>
             <p className="k-intro__body rv d2">
@@ -139,7 +139,7 @@ export default function KerstPage() {
             <div className="k-facts">
               <div className="k-fact rv">
                 <p className="k-fact__k">Wanneer</p>
-                <p className="k-fact__v">24, 25 en 26 december</p>
+                <p className="k-fact__v">25 en 26 december</p>
               </div>
               <div className="k-fact rv d1">
                 <p className="k-fact__k">Acht gangen</p>
@@ -219,8 +219,9 @@ export default function KerstPage() {
               Reserveer uw <em>kersttafel</em>
             </h2>
             <p className="k-res__text rv d2">
-              Reserveren gaat via de groene reserveringsknop rechtsonder op deze pagina. Kies 24, 25
-              of 26 december en uw aantal personen. Het kerstmenu kiest u gewoon aan tafel.
+              Reserveren gaat via de groene reserveringsknop rechtsonder op deze pagina. Kies 25 of 26
+              december en uw aantal personen. Het kerstmenu kiest u gewoon aan tafel. Let op: op 23
+              en 24 december zijn wij gesloten.
             </p>
             <div className="k-how rv d3">
               <span className="k-how__arrow" aria-hidden="true">
@@ -228,7 +229,7 @@ export default function KerstPage() {
               </span>
               <div>
                 <p className="k-how__label">Gebruik de reserveringsknop rechtsonder</p>
-                <p className="k-how__sub">Kies 24, 25 of 26 december</p>
+                <p className="k-how__sub">Kies 25 of 26 december</p>
               </div>
             </div>
             <p className="k-res__pdf rv d4">

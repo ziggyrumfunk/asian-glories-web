@@ -1,11 +1,11 @@
 'use client';
 
-import { useT } from '@/lib/i18n';
-import { formatRange, WEEK_HOURS } from '@/lib/hours';
+import { useI18n } from '@/lib/i18n';
+import { activeClosures, formatRange, WEEK_HOURS } from '@/lib/hours';
 
 /** The seven opening-hours rows used on the home and reserveer pages. */
 export default function OpeningHoursRows() {
-  const t = useT();
+  const { t, locale } = useI18n();
   return (
     <>
       {WEEK_HOURS.map((d) => (
@@ -13,6 +13,11 @@ export default function OpeningHoursRows() {
           <span>{t(`day.${d.day}`)}</span>
           <span>{d.opens ? `${formatRange(d)}${d.mark ? ' *' : ''}` : t('day.closed')}</span>
         </div>
+      ))}
+      {activeClosures().map((c) => (
+        <p key={c.from} style={{ marginTop: 14, fontSize: 16, fontWeight: 500 }}>
+          {c[locale]}
+        </p>
       ))}
     </>
   );
