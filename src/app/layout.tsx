@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant, DM_Sans } from 'next/font/google';
 import LoadingCurtain from '@/components/LoadingCurtain';
 import ZenchefWidget from '@/components/ZenchefWidget';
+import ChristmasNotice from '@/components/ChristmasNotice';
 import { I18nProvider } from '@/lib/i18n';
 import { WEEK_HOURS } from '@/lib/hours';
 import './globals.css';
@@ -109,6 +110,7 @@ export default function RootLayout({
         <LoadingCurtain />
         <I18nProvider>
           {children}
+          <ChristmasNotice />
         </I18nProvider>
         <ZenchefWidget />
       </body>

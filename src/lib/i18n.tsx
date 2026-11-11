@@ -280,6 +280,18 @@ const DICT: Dict = {
   // Press wall
   'press.eyebrow': { nl: 'In de pers', en: 'In the press' },
 
+  // Kerst popup (until 26 December 2026)
+  'kerstpop.eyebrow': { nl: '24, 25 & 26 december', en: '24, 25 & 26 December' },
+  'kerstpop.title': { nl: 'Kerst bij Asian Glories', en: 'Christmas at Asian Glories' },
+  'kerstpop.body': {
+    nl:
+      'Een kerstverhaal in acht gangen, van zalmsashimi tot Pekingeend. Ook in zes of vier gangen.',
+    en:
+      'A Christmas story in eight courses, from salmon sashimi to Peking duck. Also available in six or four courses.',
+  },
+  'kerstpop.btn': { nl: 'Bekijk het kerstmenu', en: 'View the Christmas menu' },
+  'kerstpop.close': { nl: 'Sluiten', en: 'Close' },
+
   // Kookcursus band on the home page
   'home.course.label': {
     nl: 'Kookcursus · Woensdag 7 oktober',
