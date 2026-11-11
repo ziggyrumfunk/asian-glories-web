@@ -21,7 +21,7 @@ const quotes = [
   },
   {
     quote: 'De basisproducten zijn vers en kwaliteitsvol, de opmaak fijn en verzorgd.',
-    publication: 'Gault & Millau',
+    publication: 'Gault&Millau',
     award: '13/20',
     cite: 'https://www.gault-millau.nl/en/restaurants/asian-glories-rotterdam',
   },
@@ -108,7 +108,7 @@ export default function PressWall({ variant = 'section' }: { variant?: 'section'
               type="button"
               role="tab"
               aria-selected={i === active}
-              aria-label={`Toon quote ${i + 1} van ${quotes.length}`}
+              aria-label={`Toon citaat ${i + 1} van ${quotes.length}`}
               className="press__dot"
               data-active={i === active ? 'true' : 'false'}
               onClick={() => setActive(i)}

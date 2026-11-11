@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description:
     'Onze wijnkaart: zorgvuldig geselecteerde wijnen die goed samengaan met de Kantonese en Sichuanese keuken.',
   alternates: { canonical: '/wijnkaart' },
+  openGraph: {
+    title: 'Wijnkaart | Asian Glories Rotterdam',
+    description: 'Zorgvuldig geselecteerde wijnen die goed samengaan met de Kantonese en Sichuanese keuken.',
+  },
 };
 
 type Price = { glass?: string; bottle?: string };
@@ -63,7 +67,7 @@ const bubbels: Wine[] = [
   {
     name: (
       <>
-        <strong>Cava</strong> <em>| Glas |</em> dArciac Selecci&oacute; Brut
+        <strong>Cava,</strong> d&apos;Arciac Selecci&oacute; Brut
       </>
     ),
     glass: '€ 7,5',
@@ -99,7 +103,7 @@ const bubbels: Wine[] = [
   {
     name: (
       <>
-        <strong>Delot P&egrave;re en Fils,</strong> Champagne, Blanc de Noir Reserve
+        <strong>Delot P&egrave;re et Fils,</strong> Champagne, Blanc de Noirs R&eacute;serve
       </>
     ),
     stack: [
@@ -225,7 +229,7 @@ const huisRood: Wine[] = [
   {
     name: (
       <>
-        <strong>Leyda Reserva,</strong> Carmen&eacute;re, Central Valley, Chili
+        <strong>Leyda Reserva,</strong> Carm&eacute;n&egrave;re, Central Valley, Chili
       </>
     ),
     glass: '€ 8,5',
@@ -255,7 +259,7 @@ const huisRose: Wine[] = [
   {
     name: (
       <>
-        <strong>Domaine Haut Gl&eacute;on,</strong> Vall&eacute;e Du Paradis, Languedoc-Roussillon
+        <strong>Domaine Haut Gl&eacute;on,</strong> Vall&eacute;e du Paradis, Languedoc-Roussillon
       </>
     ),
     glass: '€ 10,5',
@@ -277,7 +281,7 @@ const witteWijnen: Wine[] = [
   {
     name: (
       <>
-        <strong>Rijks Chenin Blanc Governors Reserve,</strong> Zuid-Afrika <em>2020</em>
+        <strong>Rijk&apos;s Chenin Blanc Governor&apos;s Reserve,</strong> Zuid-Afrika <em>2020</em>
       </>
     ),
     desc:
@@ -287,7 +291,7 @@ const witteWijnen: Wine[] = [
   {
     name: (
       <>
-        <strong>Baron de L, Baron de Ladoucette,</strong> Pouilly Fum&eacute;, Loire, Frankrijk <em>2022</em>
+        <strong>Baron de L, Baron de Ladoucette,</strong> Pouilly-Fum&eacute;, Loire, Frankrijk <em>2022</em>
       </>
     ),
     desc:
@@ -320,7 +324,7 @@ const witteWijnen: Wine[] = [
   {
     name: (
       <>
-        <strong>Bourgogne, Clos Du Chateau,</strong> Chateau Meursault, Frankrijk <em>2021</em>
+        <strong>Bourgogne, Clos du Ch&acirc;teau,</strong> Ch&acirc;teau de Meursault, Frankrijk <em>2021</em>
       </>
     ),
     desc:
@@ -330,10 +334,10 @@ const witteWijnen: Wine[] = [
   {
     name: (
       <>
-        <strong>Pouilly Fuiss&eacute;, Domaine Ferret,</strong> Bourgogne, Frankrijk <em>2023</em>
+        <strong>Pouilly-Fuiss&eacute;, Domaine Ferret,</strong> Bourgogne, Frankrijk <em>2023</em>
       </>
     ),
-    desc: 'Jong, fris, mooie bitters, zachte zuren, groenig kruidig elegant.',
+    desc: 'Jong en fris, met mooie bitters, zachte zuren en een groenig, kruidig en elegant karakter.',
     price: { bottle: '€ 105' },
   },
   {
@@ -343,7 +347,7 @@ const witteWijnen: Wine[] = [
       </>
     ),
     desc:
-      'Er zijn slechts 7 Grand Cru-wijngaarden in heel Chablis; Regnard is de enige wijnmakerij die wijngaarden heeft in alle 7.',
+      'Er zijn slechts zeven grand-cruwijngaarden in heel Chablis; Regnard is de enige wijnmakerij met wijngaarden in alle zeven.',
     stack: [
       { amount: '€ 70,5', ml: '375ML' },
       { amount: '€ 100', ml: '750ML' },
@@ -374,7 +378,7 @@ const witteWijnen: Wine[] = [
         <strong>Chablis, Hamelin,</strong> Bourgogne, Frankrijk <em>2024</em>
       </>
     ),
-    desc: 'Frisheid en soepele, milde smaak. Echte Chablis.',
+    desc: 'Fris, met een soepele en milde smaak. Een echte Chablis.',
     price: { bottle: '€ 70' },
   },
   {
@@ -421,7 +425,7 @@ const witteWijnen: Wine[] = [
         <strong>Riesling, Domaine Schoffit,</strong> Elzas, Frankrijk <em>2024</em>
       </>
     ),
-    desc: 'Elzasser specialiteit, krachtig vol en delicaat van smaak.',
+    desc: 'Een Elzasser specialiteit: krachtig en vol, maar delicaat van smaak.',
     price: { bottle: '€ 54,5' },
   },
   {
@@ -431,7 +435,7 @@ const witteWijnen: Wine[] = [
       </>
     ),
     desc:
-      'Zeer geurig bouquet met tonen van perzik en rijpe peer, wat bloemen en klein botertje. Volle chardonnay, gezond fris fruit met een droge, lange afdronk.',
+      'Zeer geurig bouquet met tonen van perzik en rijpe peer, wat bloemen en een klein botertje. Volle chardonnay, gezond fris fruit met een droge, lange afdronk.',
     price: { bottle: '€ 54' },
   },
   {
@@ -459,7 +463,7 @@ const witteWijnen: Wine[] = [
         <strong>Weissburgunder,</strong> Weingut Georg Mosbacher, Duitsland <em>2024</em>
       </>
     ),
-    desc: 'Volle frisse Pinot Blanc met een mooi spel van zoet en zuur.',
+    desc: 'Volle, frisse pinot blanc met een mooi spel van zoet en zuur.',
     price: { bottle: '€ 50' },
   },
 ];
@@ -473,13 +477,13 @@ const rodeWijnen: Wine[] = [
       </>
     ),
     desc:
-      'Na zorgvuldige selectie en 18-24 maanden houtlagering ontstaat een elegante wijn met zacht fruitig parfum en nobele houttonen.',
+      'Na zorgvuldige selectie en 18 tot 24 maanden houtlagering ontstaat een elegante wijn met zacht fruitig parfum en nobele houttonen.',
     price: { bottle: '€ 225' },
   },
   {
     name: (
       <>
-        <strong>Rijks Pinotage Governors Reserve,</strong> Zuid-Afrika <em>2016</em>
+        <strong>Rijk&apos;s Pinotage Governor&apos;s Reserve,</strong> Zuid-Afrika <em>2016</em>
       </>
     ),
     desc:
@@ -509,7 +513,7 @@ const rodeWijnen: Wine[] = [
   {
     name: (
       <>
-        <strong>Marsannay Clos De Jeu,</strong> Ch&acirc;teau Marsannay, Frankrijk <em>2022</em>
+        <strong>Marsannay Clos de Jeu,</strong> Ch&acirc;teau de Marsannay, Frankrijk <em>2022</em>
       </>
     ),
     desc:
@@ -612,7 +616,7 @@ const rodeWijnen: Wine[] = [
   {
     name: (
       <>
-        <strong>Rijks Pinotage, Touch of Oak,</strong> Zuid-Afrika <em>2023</em>
+        <strong>Rijk&apos;s Pinotage, Touch of Oak,</strong> Zuid-Afrika <em>2023</em>
       </>
     ),
     desc:
@@ -622,7 +626,7 @@ const rodeWijnen: Wine[] = [
   {
     name: (
       <>
-        <strong>Chianti Classico, Querciabella,</strong> Toscana, Itali&euml; <em>2021</em>
+        <strong>Chianti Classico, Querciabella,</strong> Toscane, Itali&euml; <em>2021</em>
       </>
     ),
     desc:
@@ -635,7 +639,7 @@ const rodeWijnen: Wine[] = [
         <strong>&quot;Shotfire&quot; Shiraz,</strong> Barossa, Australi&euml; <em>2019</em>
       </>
     ),
-    desc: 'Mooi in balans met frisse zuren, veel kracht en lange afdronk.',
+    desc: 'Mooi in balans, met frisse zuren, veel kracht en een lange afdronk.',
     price: { bottle: '€ 56' },
   },
 ];
@@ -645,7 +649,7 @@ const roseWijnen: Wine[] = [
   {
     name: (
       <>
-        <strong>Whispering Angel,</strong> Caves D&apos;Esclans, C&ocirc;tes De Provence, Frankrijk
+        <strong>Whispering Angel,</strong> Caves d&apos;Esclans, C&ocirc;tes de Provence, Frankrijk
       </>
     ),
     desc:

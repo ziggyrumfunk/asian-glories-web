@@ -205,7 +205,7 @@ export default function HomePage() {
             <div className="dc">
               <img
                 src="/images/crispy-beef.jpg"
-                alt="Crispy beef met sesam en zoetzure saus"
+                alt="Crunchy beef met sesam en zoetzure saus"
                 loading="lazy"
               />
               <div className="dc__ov" />
@@ -460,7 +460,7 @@ export default function HomePage() {
               <div className="ct">
                 <span className="ct-lb">{t('home.info.phone')}</span>
                 <a className="ct-v" href="tel:+31102542071">
-                  +31 (0)10 254 20 71
+                  010 254 20 71
                 </a>
               </div>
               <div className="ct">

@@ -42,7 +42,7 @@ export default function ReserveerPage() {
               </a>{' '}
               {t('reserveer.intro2.or')}{' '}
               <a className="rsv-link" href="tel:+31102542071">
-                010 254 2071
+                010 254 20 71
               </a>
               .
             </p>
@@ -92,7 +92,7 @@ export default function ReserveerPage() {
                   <p className="rsv-info__body">
                     {t('reserveer.phone.text')}{' '}
                     <a className="rsv-link" href="tel:+31102542071">
-                      010 254 2071
+                      010 254 20 71
                     </a>{' '}
                     {t('reserveer.phone.or')}{' '}
                     <a className="rsv-link" href="mailto:info@asianglories.nl">

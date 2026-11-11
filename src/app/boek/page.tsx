@@ -116,7 +116,7 @@ export default function BoekPage() {
                 </div>
                 <div>
                   <span className="spec__label">Formaat</span>
-                  <span className="spec__val">Hardcover 220&times;280mm</span>
+                  <span className="spec__val">Hardcover, 220 &times; 280 mm</span>
                 </div>
                 <div>
                   <span className="spec__label">Prijs</span>

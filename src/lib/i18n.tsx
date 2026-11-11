@@ -50,7 +50,7 @@ const DICT: Dict = {
   'home.hero.title3': { nl: 'verhaal vertelt', en: 'story' },
   'home.hero.subtitle': {
     nl:
-      'Verfijnde Chinese keuken bereid met eeuwenoude technieken en zorgvuldig geselecteerde ingrediënten. Een ervaring die bijblijft.',
+      'Verfijnde Chinese keuken, bereid met eeuwenoude technieken en zorgvuldig geselecteerde ingrediënten. Een ervaring die bijblijft.',
     en:
       'Refined Chinese cuisine prepared with centuries-old techniques and carefully selected ingredients. An experience that stays with you.',
   },
@@ -220,7 +220,7 @@ const DICT: Dict = {
   },
   'home.info.menunote': {
     nl:
-      'Maandag t/m donderdag serveren wij kleine gerechten om te delen. Van vrijdag t/m zondag staat de volledige kaart op tafel, met ook onze signatuurgerechten.',
+      'Maandag t/m donderdag serveren wij kleine gerechten om te delen. Van vrijdag t/m zondag staat de volledige kaart op tafel, inclusief onze signatuurgerechten.',
     en:
       'Monday to Thursday we serve smaller plates for sharing. Friday to Sunday the full menu is available, including our signature dishes.',
   },

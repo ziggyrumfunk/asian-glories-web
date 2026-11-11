@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description:
     "Bekijk de menukaart van Asian Glories Rotterdam: proeverijmenu's, handgemaakte dim sum en kleine gerechten om te delen, en van vrijdag t/m zondag onze signatuurgerechten. Authentieke Kantonese en Sichuanese keuken.",
   alternates: { canonical: '/menu' },
+  openGraph: {
+    title: 'Menu | Asian Glories Rotterdam',
+    description:
+      "Proeverijmenu's, handgemaakte dim sum en kleine gerechten om te delen. Van vrijdag t/m zondag ook onze signatuurgerechten.",
+  },
 };
 
 const menuSchema = {
@@ -149,7 +154,7 @@ const signatureDishes: Dish[] = [
   {
     name: 'Canadese kreeft | bosui | gember',
     note: 'Alleen vooraf te bestellen',
-    price: '€ 12,50 per 100 gr',
+    price: '€ 12,50 per 100 g',
   },
   { name: 'Diamanthaas | zwarte peper | macadamia | sesam', price: '€ 38,5' },
   { name: 'Crunchy beef | sesam | zoetzuur | licht pittig', price: '€ 30' },
@@ -193,8 +198,8 @@ const SmallPlates = (
 const Signature = (
   <>
     <p className="tasting-note rv" style={{ marginBottom: 'clamp(40px,5vw,60px)' }}>
-      Alleen op vrijdag, zaterdag en zondag. Onze grote gerechten om te delen, bedoeld als het
-      middelpunt van uw tafel, naast de kleine gerechten.
+      Onze grote gerechten om te delen staan alleen op vrijdag, zaterdag en zondag op de kaart.
+      Ze zijn bedoeld als middelpunt van uw tafel, naast de kleine gerechten.
     </p>
 
     <CatHeader title="Signatuurgerechten om te delen" />
@@ -275,9 +280,9 @@ export default function MenuPage() {
 
       <section className="menu-cta-bottom">
         <div className="menu-cta-bottom__inner">
-          <span className="menu-cta-bottom__label rv">Ook lekkere wijnen</span>
+          <span className="menu-cta-bottom__label rv">Wijn bij uw maaltijd</span>
           <h2 className="rv d1">
-            Onze <em>wijnkaart</em>
+            Onze <em>wijnkaart</em>,
             <br />
             afgestemd op de keuken
           </h2>
