@@ -29,9 +29,6 @@ export default function Footer() {
           <Link href="/boek" className="text-[11px] tracking-[0.14em] uppercase text-white/30 hover:text-gold transition-colors">
             {t('nav.book')}
           </Link>
-          <Link href="/kookcursus" className="text-[11px] tracking-[0.14em] uppercase text-white/30 hover:text-gold transition-colors">
-            {t('nav.course')}
-          </Link>
         </div>
       </div>
       {/* Agency credit. Dofollow on purpose — passes SEO authority from this

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useT } from '@/lib/i18n';
+import { kerstActive } from '@/lib/kerst';
 
 /**
  * Site-wide announcement of the Kerst tasting menu (25 and 26 December
@@ -10,12 +11,11 @@ import { useT } from '@/lib/i18n';
  *
  * - Shows at most once per 8 days per visitor (timestamp in localStorage,
  *   refreshed the moment it appears).
- * - Deactivates itself after Boxing Day; no code change needed afterwards.
+ * - Deactivates itself after Boxing Day (lib/kerst.ts); no code change needed.
  * - Skipped on the /kerst page itself.
  * - Waits a beat so the LoadingCurtain can finish before the dialog fades in.
  */
 const STORAGE_KEY = 'ag-notice-kerst-2026-v2';
-const HIDE_AFTER = new Date('2026-12-27T00:00:00+01:00');
 const REPEAT_AFTER_MS = 8 * 24 * 60 * 60 * 1000;
 const SHOW_DELAY_MS = 2600;
 
@@ -24,7 +24,7 @@ export default function ChristmasNotice() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (new Date() >= HIDE_AFTER) return;
+    if (!kerstActive()) return;
     try {
       const last = Number(localStorage.getItem(STORAGE_KEY) || 0);
       if (last && Date.now() - last < REPEAT_AFTER_MS) return;

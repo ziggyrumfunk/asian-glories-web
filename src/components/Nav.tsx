@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useI18n } from '@/lib/i18n';
+import { kerstActive } from '@/lib/kerst';
 
 export default function Nav() {
   const { locale, setLocale, t } = useI18n();
@@ -12,9 +13,10 @@ export default function Nav() {
   const links = [
     { href: '/#verhaal', label: t('nav.about') },
     { href: '/menu', label: t('nav.menu') },
+    // Seasonal: disappears by itself after Christmas (see lib/kerst.ts).
+    ...(kerstActive() ? [{ href: '/kerst', label: t('nav.kerst') }] : []),
     { href: '/wijnkaart', label: t('nav.wine') },
     { href: '/boek', label: t('nav.book') },
-    { href: '/kookcursus', label: t('nav.course') },
     { href: '/#evenementen', label: t('nav.events') },
     { href: '/#openingstijden', label: t('nav.hours') },
     { href: '/#contact', label: t('nav.contact') },

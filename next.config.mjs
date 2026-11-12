@@ -24,6 +24,9 @@ const nextConfig = {
       // matching sections on the home page so old links and search results keep working.
       { source: '/openingstijden', destination: '/#openingstijden', permanent: true },
       { source: '/contact', destination: '/#contact', permanent: true },
+      // Kookcursus (7 Oct 2026) is over and its page is switched off. Temporary,
+      // so the URL can come back for a next course. Old page is in git history.
+      { source: '/kookcursus', destination: '/', permanent: false },
     ];
   },
 };

@@ -25,7 +25,7 @@ const DICT: Dict = {
   'nav.wine': { nl: 'Wijnkaart', en: 'Wine list' },
   'nav.book': { nl: 'Boek', en: 'Book' },
   'nav.events': { nl: 'Evenementen', en: 'Events' },
-  'nav.course': { nl: 'Kookcursus', en: 'Cooking course' },
+  'nav.kerst': { nl: 'Kerst', en: 'Christmas' },
   'nav.hours': { nl: 'Openingstijden', en: 'Hours' },
   'nav.contact': { nl: 'Contact', en: 'Contact' },
   'nav.reserve': { nl: 'Reserveer', en: 'Reserve' },
@@ -291,21 +291,6 @@ const DICT: Dict = {
   },
   'kerstpop.btn': { nl: 'Bekijk het kerstmenu', en: 'View the Christmas menu' },
   'kerstpop.close': { nl: 'Sluiten', en: 'Close' },
-
-  // Kookcursus band on the home page
-  'home.course.label': {
-    nl: 'Kookcursus · Woensdag 7 oktober',
-    en: 'Cooking course · Wednesday 7 October',
-  },
-  'home.course.title1': { nl: 'Zelf leren koken', en: 'Learn to cook' },
-  'home.course.title2': { nl: 'met chef Kevin', en: 'with chef Kevin' },
-  'home.course.txt': {
-    nl:
-      'Een hands-on kookcursus in ons eigen restaurant: dim sum vouwen, zelf wokken en afsluiten met een viergangenmenu van eigen hand. Het aantal plekken is beperkt.',
-    en:
-      'A hands-on cooking course in our own restaurant: fold dim sum, work the wok and finish with a four-course menu you cooked yourself. Spots are limited.',
-  },
-  'home.course.btn': { nl: 'Bekijk de kookcursus', en: 'View the cooking course' },
 };
 
 type Ctx = {

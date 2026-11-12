@@ -1,11 +1,15 @@
 import type { MetadataRoute } from 'next';
+import { kerstActive } from '@/lib/kerst';
 
 const BASE_URL = 'https://www.asianglories.nl';
 
 /**
  * Generates /sitemap.xml automatically. Next.js reads this file at build time
  * and serves the resulting XML. Add new routes here when we create them.
+ * Rebuilt hourly so seasonal pages (Kerst) drop out by themselves.
  */
+export const revalidate = 3600;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
@@ -39,17 +43,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.6,
     },
-    {
-      url: `${BASE_URL}/kerst`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/kookcursus`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
+    ...(kerstActive()
+      ? [
+          {
+            url: `${BASE_URL}/kerst`,
+            lastModified: now,
+            changeFrequency: 'weekly' as const,
+            priority: 0.9,
+          },
+        ]
+      : []),
   ];
 }
